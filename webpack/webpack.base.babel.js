@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import autoprefixer from 'autoprefixer';
-import bootstrapEntryPoints from './webpack.bootstrap.babel.js';
+import bootstrapEntryPoints from './webpack.bootstrap.babel';
 
 const paths = {
   assets: path.resolve(__dirname, '../assets'),

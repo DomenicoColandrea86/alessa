@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import webpackMerge from 'webpack-merge';
-import webpackConfigBase from './webpack.base.babel.js';
+import webpackConfigBase from './webpack.base.babel';
 
 const devConfig = () =>
   webpackMerge(webpackConfigBase(), {

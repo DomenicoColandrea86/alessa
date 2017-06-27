@@ -1,6 +1,6 @@
 import webpackMerge from 'webpack-merge';
-import webpackConfigBase from './webpack.base.babel';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import webpackConfigBase from './webpack.base.babel';
 
 const prodConfig = () =>
   webpackMerge(webpackConfigBase(), {

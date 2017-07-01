@@ -5,8 +5,6 @@ import webpackConfigBase from './webpack.base.babel';
 const devConfig = () =>
   webpackMerge(webpackConfigBase(), {
 
-    devtool: '#cheap-module-eval-source-map',
-
     watch: true,
 
     watchOptions: {

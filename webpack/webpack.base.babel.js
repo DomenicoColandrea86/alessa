@@ -38,17 +38,9 @@ const baseConfig = () => ({
         use: 'imports-loader?jQuery=jquery',
       },
       {
-        test: /\.(png|jpg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              name: 'images/[name].[ext]',
-            },
-          },
-        ],
-      },
+        test: /\.(jpg|png|gif)$/,
+        use: 'file-loader?name=images/[name].[ext]',
+      }, 
       {
         test: /\.(woff|woff2|otf|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [

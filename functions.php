@@ -107,13 +107,18 @@ add_action( 'widgets_init', 'g7_marketing_widgets_init' );
 function g7_marketing_scripts() {
 	wp_enqueue_style( 'g7-marketing-style', get_template_directory_uri() . '/assets/app.bundle.css' );
 
-	wp_enqueue_script( 'g7-marketing-js', get_template_directory_uri() . '/assets/app.bundle.js', array(), '20170627', true );
+	wp_enqueue_script( 'g7-marketing-js', get_template_directory_uri() . '/assets/app.bundle.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'g7_marketing_scripts' );
+
+add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
 
 /**
  * Implement the Custom Header feature.

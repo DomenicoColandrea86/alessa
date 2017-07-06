@@ -1,0 +1,24 @@
+
+// adds custom 5 column grid for IG Feed
+.col-ig {
+    width: 20%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-ig {
+        width: 33.33%;
+        float: left;
+    }
+}

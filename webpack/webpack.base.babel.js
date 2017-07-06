@@ -40,7 +40,7 @@ const baseConfig = () => ({
       {
         test: /\.(jpg|png|gif)$/,
         use: 'file-loader?name=images/[name].[ext]',
-      }, 
+      },
       {
         test: /\.(woff|woff2|otf|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [
@@ -48,7 +48,7 @@ const baseConfig = () => ({
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: 'fonts/[name].[ext]',
+              name: 'wp-content/themes/G7/assets/fonts/[name].[ext]',
             },
           },
         ],

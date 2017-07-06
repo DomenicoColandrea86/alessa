@@ -1,13 +1,37 @@
 // Styling for the footer
 footer {
-    padding: 50px 0 65px;
-    .list-inline {
-        margin: 0;
-        padding: 0;
+    background: #191919;
+    padding: 40px 0;
+
+    h4,h5,h6 {
+        color: #98AFC2;
+        font-weight: 400;
+        @include sans-serif-font;
     }
-    .copyright {
-        font-size: 14px;
-        margin-bottom: 0;
-        text-align: center;
+
+    p {
+        color: #A3A3A3;
+        @include serif-font;
+    }
+
+    .branding {
+        width: 44px;
+        height: 28px;
+        background-size: 100%;
+        background-image: url('../static/images/footer/G7Logo_white_gold_circle_footer.png');
+    }
+
+    .alpha {
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+
+    .beta {
+        display: none !important;
+        
+        @media (max-width: 768px) {
+            display: block !important;
+        }
     }
 }

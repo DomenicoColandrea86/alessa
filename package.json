@@ -69,6 +69,7 @@
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
+    "instafeed.js": "^1.4.1",
     "jquery": "^3.2.1",
     "rimraf": "^2.6.1",
     "tether": "^1.4.0"

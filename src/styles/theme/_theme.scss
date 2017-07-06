@@ -1,14 +1,13 @@
 @import "variables.scss";
+@import "colors.scss";
 @import "mixins.scss";
+@import "utils.scss";
 @import "global.scss";
+@import "icons.scss";
 @import "navbar.scss";
-@import "masthead.scss";
+@import "home.scss";
 @import "post.scss";
 @import "contact.scss";
 @import "footer.scss";
+@import "grid.scss";
 @import "bootstrap-overrides.scss";
-
-.what-we-do,
-.selected-clients {
-	background: #EAEEF2;
-}

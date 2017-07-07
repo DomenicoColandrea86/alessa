@@ -1,20 +1,14 @@
 
 <?php
 /**
- * Template Name: Home
+ * Template Name: Contact us
  * @package G7-Marketing
  */
 
 get_header(); ?>
 
 <!-- Hero -->
-<div class="hero">
-	<div class="row">
-		<div class="col-md-8 offset-md-2">
-			<h1>We lorem ipsum dolor sit amet</h1>	
-		</div>
-	</div>
-</div>
+<div class="hero"></div>
 
 <!-- Introduction -->
 <section class="container-fluid intro">

@@ -1,15 +1,32 @@
 
 .hero {
-    background: no-repeat 50%;
-    background-image: url('../static/images/home/hero/ES_Ram_ChrisStapleton_TNWaltz_Vinyl.png');
-    background-color: #ced0cb;
-    background-attachment: scroll;
-    background-size: contain;
     height: 500px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: no-repeat 50%;
+    background-image: url('../static/images/home/hero/Hero.png');
+    background-attachment: scroll;
+    background-size: cover;
     transition: all 0.2s linear;
 
     @media (max-width: 768px) {
 		height: 225px;
+	}
+
+	h1 {
+		display: table-cell;
+	    vertical-align: middle;
+	    font-size: 55px;
+	    color: #fff;
+	    line-height: 1.2;
+	    text-align: center;
+    	@include sans-serif-font;
+
+    	@media (max-width: 768px) {
+			font-size: 30px;
+		}
 	}
 }
 

@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The header for our theme
@@ -27,20 +28,23 @@
 			<!-- Navigation -->
 			<nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
 			    <div class="container">
-			        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-			        	<i class="fa fa-bars fa-2x"></i>
-			        </button>
-			        <a class="navbar-brand" href="index.html"></a>
-			        <div class="collapse navbar-collapse" id="navbarResponsive">
-			            <ul class="navbar-nav ml-auto">
-			                <li class="nav-item">
-			                    <a class="nav-link text-uppercase" href="index.html">Home</a>
-			                </li>
-			                <li class="nav-item">
-			                    <a class="nav-link text-uppercase" href="about.html">Our Team</a>
-			                </li>
-			            </ul>
-			        </div>
+			        <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
+			        	<img src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/G7Logo_allwhite-1.png'; ?>" width="204" height="56" class="d-inline-block align-top" alt="">
+		        	</a>
+		        	<?php
+
+		        	wp_nav_menu([
+					    'theme_location' => '',
+					    'depth' => 2,
+					    'container' => 'div',
+					    'container_class' => 'collapse navbar-collapse',
+					    'container_id' => 'navbarResponsive',
+					    'menu_class' => 'navbar-nav ml-auto',
+					    'fallback_cb' => '__return_empty_string',
+					    'walker' => new \G7\NavWalker\WalkerNavMenu()
+					]);
+
+		        	?>
 			    </div>
 			</nav>
 		</header><!-- #masthead -->

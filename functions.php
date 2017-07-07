@@ -121,6 +121,12 @@ function remove_admin_login_header() {
 }
 
 /**
+ * Register Custom Navigation Walker
+ */
+require_once('utils/navigation/G7NavwalkerBase.php');
+require_once('utils/navigation/G7Navwalker.php');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

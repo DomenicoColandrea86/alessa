@@ -1,38 +1,27 @@
+/*
+Bootstrap 4.0.0-alpha2 navbar with dropdown menus
+=================================================
+A small CSS modification is required. Add this to your theme CSS.
+*/
+
+.navbar .dropdown-menu li {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+
 // Styling for the navbar
 #mainNav {
     position: absolute;
     @include sans-serif-font;
-    background: #ced0cb;
 
     > .container {
-        width: 100% !important;
-
-        // .navbar-collapse.collapse.show {
-        //     background: #191919;
-        //     position: fixed;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     height: 500px;
-
-        //     .nav-link {
-        //         color: white;
-        //     }
-        // }
+        width: 100% !important;        
     }
 
     .navbar-brand {
-        font-weight: 800;
-        color: $gray-light;
-        width: 90px;
-        height: 51px;
-        padding: 0 !important;
-        background-image: url('../static/images/logo/G7Logo_white_gold_circle.png');
-        background-size: 100%;
-
         @media (max-width: 991px) {
-            width: 44px;
-            height: 28px;
+            display: none !important;
         }
     }
     .navbar-toggler {
@@ -49,6 +38,7 @@
                 font-size: 12px;
                 font-weight: 400;
                 letter-spacing: 1px;
+                text-transform: uppercase;
                 @include sans-serif-font;
             }
         }

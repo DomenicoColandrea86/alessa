@@ -1,0 +1,27 @@
+
+.icon-arrow {
+    height: 13px;
+    width: 59px;
+    background-position: 100%;
+    background-image: url('../../assets/images/icons/Arrow.png');
+
+    &.grey-scale {
+		background-image: url('../../assets/images/icons/Arrow_grey.png');    	
+    }
+}
+
+.icon-arrow-down {
+    height: 59px;
+    width: 13px;
+    background-position: 100%;
+    background-size: 100%;
+    background-image: url('../../assets/images/icons/Arrow-down.png');
+}
+
+.fa {
+    letter-spacing: 0 !important;
+}
+
+.fa-2x {
+    font-size: 1.5em !important;
+}

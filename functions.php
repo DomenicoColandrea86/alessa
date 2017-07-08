@@ -105,9 +105,9 @@ add_action( 'widgets_init', 'g7_marketing_widgets_init' );
  * Enqueue scripts and styles.
  */
 function g7_marketing_scripts() {
-	wp_enqueue_style( 'g7-marketing-style', get_template_directory_uri() . '/assets/app.bundle.css' );
+	wp_enqueue_style( 'g7-marketing-style', get_template_directory_uri() . '/dist/app.bundle.css' );
 
-	wp_enqueue_script( 'g7-marketing-js', get_template_directory_uri() . '/assets/app.bundle.js');
+	wp_enqueue_script( 'g7-marketing-js', get_template_directory_uri() . '/dist/app.bundle.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -120,11 +120,34 @@ function remove_admin_login_header() {
 	remove_action('wp_head', '_admin_bar_bump_cb');
 }
 
+function jpb_unregister_widgets(){
+  unregister_widget('WP_Widget_Pages');
+  unregister_widget('WP_Widget_Calendar');
+  unregister_widget('WP_Widget_Archives');
+  unregister_widget('WP_Widget_Links');
+  unregister_widget('WP_Widget_Meta');
+  unregister_widget('WP_Widget_Search');
+  unregister_widget('WP_Widget_Text');
+  unregister_widget('WP_Widget_Categories');
+  unregister_widget('WP_Widget_Recent_Posts');
+  unregister_widget('WP_Widget_Recent_Comments');
+  unregister_widget('WP_Widget_RSS');
+  unregister_widget('WP_Widget_Tag_Cloud');
+  unregister_widget('WP_Nav_Menu_Widget');
+}
+
+add_action( 'widgets_init', 'jpb_unregister_widgets' );
+
 /**
  * Register Custom Navigation Walker
  */
-require_once('utils/navigation/G7NavwalkerBase.php');
-require_once('utils/navigation/G7Navwalker.php');
+require_once('functions/navigation/G7NavwalkerBase.php');
+require_once('functions/navigation/G7Navwalker.php');
+
+/**
+ * Register Custom Widgets
+ */
+require_once('functions/widgets/G7MobileNavigation.php');
 
 /**
  * Implement the Custom Header feature.

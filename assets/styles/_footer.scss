@@ -1,0 +1,81 @@
+// Styling for the footer
+
+footer,
+.footer {
+    background: #191919;
+    padding: 60px 0;
+
+    @media (max-width: 768px) {
+        padding: 60px 15px;
+    }
+
+    .section-text {
+        color: white !important;
+    }
+
+    h5 {
+        color: #EDEDED;
+        font-weight: 200;
+        @include sans-serif-font;
+        letter-spacing: 2px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    p:not(.section-text) {
+        font-size: 15px;
+        font-weight: 200;
+        color: #A3A3A3;
+        letter-spacing: 2px;
+        @include sans-serif-font;
+    }
+
+    .branding {
+        width: 96px;
+        height: 61px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
+        background-image: url('../../assets/images/logo/G7Logo_white_gold_circle.png');
+    }
+
+    .copyright {
+        margin-top: 75px;
+
+        p {
+            font-size: 12px;
+            font-weight: 200;
+            color: #A3A3A3;
+            letter-spacing: 2px;
+            @include sans-serif-font;
+        }
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .branding {
+        margin: 0 auto;
+        display: table;
+        margin-top: 100px;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+
+    .row.mx-auto {
+        width: 100%;
+    }
+}

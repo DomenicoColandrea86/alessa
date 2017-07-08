@@ -10,7 +10,6 @@
  */
 
 ?>
-
 	</div>
 	<!-- #content -->
 
@@ -20,39 +19,56 @@
 	        <div class="row">
 	            <div class="col-lg-10 offset-lg-1">
 		            <div class="row">
-			    		<div class="col-md-4 col-sm-6">
-				    		<h5 class="mb-4">Sign up to our newsletter</h4>
-				        	<a href="#" class="d-block icon-arrow grey-scale"></a>
-				        	<br>
-				        	<div class="alpha">
-				        		<p>G7 Marketing is part of the Independent Network of Project Worldwide agencies</p>
-					        	<p>All Rights resevered 2017</p>
-					        	<div class="branding"></div>
-				        	</div>
-				    	</div>
-				    	<div class="col-md-3 offset-md-3">
-				    		<h5>Contact us</h5>
+		            	<div class="mobile mb-5">
+		            		<div class="col-12">
+			            		<p class="section-text mb-4">Sign up to our Newsletter</p>
+		        				<a href="#" class="d-block icon-arrow"></a>		
+		            		</div>
+    					</div>
+		            	<div class="col-md-4">
+		            		<h5>Contact us</h5>
 				    		<br>
 				    		<p>(615) 988-3422</p>
 				    		<p>info@g7marketing.com</p>
 				    		<br>
 				    		<p>801 18th Ave S</p>
-				    		<p> Nashville, TN 37203</p>
+				    		<p class="mb-0"> Nashville, TN 37203</p>
+		            	</div>
+			    		<div class="col-md-4 d-flex">
+			    			<div class="row mx-auto">
+			    				<div class="col-12 p-0">
+			    					<div class="desktop">
+			    						<h5 class="mb-4">Newsletter Sign up</h4>
+				        				<a href="#" class="d-block icon-arrow"></a>		
+			    					</div>
+			    					<div class="mobile">
+						        		<h5 class="mt-5 mb-4">Follow us</h5>
+			    					</div>
+			    				</div>
+			    				<div class="col-12 p-0 align-self-end">
+				    				<div class="d-flex justify-content-between">
+						        		<a href="http://facebook.com">
+					    					<i class="white fa fa-2x fa-facebook" aria-hidden="true"></i>
+					    				</a>
+					    				<a href="http://instagram.com">
+					    					<i class="white fa fa-2x fa-instagram" aria-hidden="true"></i>
+					    				</a>
+					    				<a href="http://youtube.com">
+					    					<i class="white fa fa-2x fa-youtube-play" aria-hidden="true"></i>
+					    				</a>
+					    				<a href="http://twitter.com">
+					    					<i class="white fa fa-2x fa-twitter" aria-hidden="true"></i>
+					    				</a>
+						        	</div>
+			    				</div>
+			    			</div>
 				    	</div>
-				    	<div class="col-md-2">
-							<h5>Social</h5>
-				    		<br>
-				    		<p>Facebook</p>
-				    		<p>Twitter</p>
-				    		<p>Instagram</p>
-				    		<p>LinkedIn</p>
-				    		<p>YouTube</p>
-				    		<p>Google+</p>
+				    	<div class="col-lg-2 offset-lg-2 col-md-3 offset-md-1">
+					        <div class="branding"></div>
 				    	</div>
-				    	<div class="beta col-md-2">
-				    		<div class="branding mx-auto mb-4 mt-4"></div>
-			        		<p class="text-center">G7 Marketing is part of the Independent Network of Project Worldwide agencies</p>
-				        	<p class="text-center">All Rights resevered 2017</p>
+				    	<div class="col-12 copyright">
+			        		<p class="m-0 text-center">G7 Marketing is part of the Independent Network of Project Worldwide agencies</p>
+				        	<p class="m-0 text-center">All Rights resevered 2017</p>
 			        	</div>
 				    </div>
 	            </div>

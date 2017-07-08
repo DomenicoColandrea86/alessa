@@ -4,15 +4,15 @@ import autoprefixer from 'autoprefixer';
 import bootstrapEntryPoints from './webpack.bootstrap.babel';
 
 const paths = {
-  assets: path.resolve(__dirname, '../assets'),
-  src: path.resolve(__dirname, '../src'),
+  dist: path.resolve(__dirname, '../dist'),
+  js: path.resolve(__dirname, '../js'),
 };
 
 // eslint-disable-next-line no-console
 console.log(`=> bootstrap-loader configuration: ${process.env.NODE_ENV === 'production' ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev}`);
 
 const baseConfig = () => ({
-  context: paths.src,
+  context: paths.js,
   // For production build we want to extract CSS to stand-alone file
   // Provide `extractStyles` param and `bootstrap-loader` will handle it
   entry: {
@@ -26,7 +26,7 @@ const baseConfig = () => ({
 
   output: {
     filename: '[name].bundle.js',
-    path: paths.assets,
+    path: paths.dist,
   },
 
   resolve: { extensions: ['*', '.js'] },
@@ -48,7 +48,7 @@ const baseConfig = () => ({
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: 'wp-content/themes/G7/assets/fonts/[name].[ext]',
+              name: 'fonts/[name].[ext]',
             },
           },
         ],

@@ -17,7 +17,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack --color --progress -p --config ./webpack/webpack.dev.babel.js",
     "build": "cross-env NODE_ENV=production webpack --color --progress -p --config ./webpack/webpack.prod.babel.js",
-    "build:clean": "rimraf ./assets",
+    "build:clean": "rimraf ./dist",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint",
     "lint:js": "npm run lint:eslint -- . ",

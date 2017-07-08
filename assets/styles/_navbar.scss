@@ -1,0 +1,209 @@
+/*
+Bootstrap 4.0.0-alpha2 navbar with dropdown menus
+=================================================
+A small CSS modification is required. Add this to your theme CSS.
+*/
+
+.navbar .dropdown-menu li {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+
+// Styling for the navbar
+#mainNav {
+    position: absolute;
+    @include sans-serif-font;
+
+    > .container {
+        width: 100% !important;        
+    }
+
+    .navbar-brand {
+        @media (max-width: 991px) {
+            display: none !important;
+        }
+    }
+    .navbar-toggler {
+        font-size: 12px;
+        font-weight: 800;
+        padding: 0;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+    }
+    .navbar-nav {
+        > li.nav-item {
+            > a {
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                @include sans-serif-font;
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        .navbar-brand {
+            padding: 15px 20px;
+            color: white;
+            &:hover,
+            &:focus {
+                color: fade-out(white, .2);
+            }
+        }
+        .navbar-nav {
+            > li.nav-item {
+                > a {
+                    padding: 15px 20px;
+                    color: white;
+                    &:hover,
+                    &:focus {
+                        color: fade-out(white, .2);
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1170px) {
+        -webkit-transition: background-color .2s;
+        -moz-transition: background-color .2s;
+        transition: background-color .2s;
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        &.is-fixed {
+            /* when the user scrolls down, we hide the header right above the viewport */
+            position: fixed;
+            top: -77px;
+            -webkit-transition: -webkit-transform .2s;
+            -moz-transition: -moz-transform .2s;
+            transition: transform .2s;
+            border-bottom: 1px solid darken(white, .05);
+            background-color: fade-out(white, .1);
+            .navbar-brand {
+                color: $gray-dark;
+                &:hover,
+                &:focus {
+                    color: $theme-primary;
+                }
+            }
+            .navbar-nav {
+                > li.nav-item {
+                    > a {
+                        color: $gray-dark;
+                        &:hover,
+                        &:focus {
+                            color: $theme-primary;
+                        }
+                    }
+                }
+            }
+        }
+        &.is-visible {
+            /* if the user changes the scrolling direction, we show the header */
+            -webkit-transform: translate3d(0, 100%, 0);
+            -moz-transform: translate3d(0, 100%, 0);
+            -ms-transform: translate3d(0, 100%, 0);
+            -o-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    .navbar-toggleable-md>.container {
+        @media (max-width: 991px) {
+            margin: 0 !important;
+        }
+    }
+}
+
+// mobile navigation
+.taptap-main-inner {
+    overflow: hidden !important;
+}
+
+.taptap-main-inner-inner {
+    padding: 65px 25px !important;
+}
+
+.taptap-by-bonfire {
+    margin-top: 0 !important;
+
+    ul.menu {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+
+        li {
+            @include sans-serif-font;
+            text-align: left !important;
+            text-transform: uppercase;
+            margin: 0 0 20px 0 !important;
+
+            a {
+                letter-spacing: 2px;
+                font-size: 16px !important;
+                @include sans-serif-font;
+            }
+        }
+    }
+}
+
+.taptap-menu-active {
+    .taptap-main-menu-button {
+        position: fixed;
+        padding: 10px 5px !important;
+    }
+}
+
+.taptap-widgets-wrapper .widget {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    @include sans-serif-font;
+    text-align: left;
+
+    h1, h2, h3, h4, h5 {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 10px !important;
+        font-weight: 200;
+    }
+}
+
+.taptap-menu-button-wrapper {
+
+    &.taptap-menu-active {
+        .taptap-main-menu-button:before,
+        .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
+        .taptap-main-menu-button:after {
+            height: 1px !important;
+            margin: 8px 0 !important;
+        }
+    }
+
+    &:not(.taptap-menu-active) {
+        .taptap-main-menu-button:before,
+        .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
+        .taptap-main-menu-button:after {
+            height: 2px !important;
+            margin: 5px 0 !important;
+        }
+    }
+}
+

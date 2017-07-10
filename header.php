@@ -28,9 +28,7 @@
 			<!-- Navigation -->
 			<nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
 			    <div class="container">
-			        <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
-			        	<img src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/G7Logo_allwhite-1.png'; ?>" width="204" height="56" class="d-inline-block align-top" alt="">
-		        	</a>
+			        <a class="navbar-brand" href="<?php echo home_url('/'); ?>"></a>
 		        	<?php
 
 		        	wp_nav_menu([

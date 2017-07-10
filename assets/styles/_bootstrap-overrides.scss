@@ -26,3 +26,11 @@
         background-color: $theme-primary;
     }
 }
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0 !important;
+}
+
+a.active.focus, a.active:focus, a.focus, a:active.focus, a:active:focus, a:focus {
+    outline: 0 !important;
+}

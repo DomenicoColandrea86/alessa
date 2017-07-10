@@ -143,16 +143,31 @@ footer {
 }
 
 .section-highlight {
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 4px;
-    @include sans-serif-font;
-    font-weight: 200;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+    font-weight: 300;
 }
 
 .section-text {
     font-size: 23px;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 1px;
     @include sans-serif-font;
+}
+
+.stripe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all 0.2s linear;
+    background-image: url('../../assets/images/bg/stripe.png');
+
+    @media (max-width: 768px) {
+        background-size: cover;
+    }
 }
 

@@ -29,9 +29,9 @@ get_header(); ?>
 </section>
 
 <!-- What we do -->
-<section class="container-fluid what-we-do">
+<section class="container-fluid what-we-do stripe">
     <div class="row">
-        <div class="col-lg-8 offset-lg-2">
+        <div class="col-lg-10 offset-lg-1">
         	<div class="row">
 	    		<div class="col-lg-12">
 		    		<h2 class="mb-5 text-center mustard">What we do</h2>
@@ -81,7 +81,6 @@ get_header(); ?>
 		    		<h2 class="mb-5 text-center mustard">Recent Projects</h2>
 		    	</div>
 	            <div class="col-lg-6 col-sm-6 portfolio-item">
-		            
 		            <div class="card card-inverse">
 					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-1.png" alt="">
 					  <div class="card-img-overlay d-flex">
@@ -135,7 +134,7 @@ get_header(); ?>
 </section>
 
 <!-- Selected Clients -->
-<section class="container-fluid selected-clients">
+<section class="container-fluid selected-clients stripe">
     <div class="row">
         <div class="col-lg-10 offset-lg-1">
         	<div class="row vertical-align">
@@ -144,22 +143,12 @@ get_header(); ?>
 		    	</div>
 		    	<div class="col-md-4 col-6">
 		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/D181-stack-cisco.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/ram-360x360.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
 		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
 		    		</div>
 		    	</div>
 		    	<div class="col-md-4 col-6">
 		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/Keds-logo.png'; ?>" alt="">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
 		    		</div>
 		    	</div>
 		    	<div class="col-md-4 col-6">
@@ -169,27 +158,7 @@ get_header(); ?>
 		    	</div>
 		    	<div class="col-md-4 col-6">
 		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/harley-davidson-logo.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/D181-stack-cisco.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/ram-360x360.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/Keds-logo.png'; ?>" alt="">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
 		    		</div>
 		    	</div>
 		    	<div class="col-md-4 col-6">
@@ -199,13 +168,43 @@ get_header(); ?>
 		    	</div>
 		    	<div class="col-md-4 col-6">
 		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/harley-davidson-logo.png'; ?>" alt="">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="col-md-4 col-6">
+		    		<div class="client-item mx-auto d-table mb-5">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="col-md-4 col-6">
+		    		<div class="client-item mx-auto d-table mb-5">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="col-md-4 col-6">
+		    		<div class="client-item mx-auto d-table mb-5">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/salesforce-logo.png'; ?>" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="col-md-4 col-6">
+		    		<div class="client-item mx-auto d-table mb-5">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="col-md-4 col-6">
+		    		<div class="client-item mx-auto d-table mb-5">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/salesforce-logo.png'; ?>" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="col-md-4 col-6">
+		    		<div class="client-item mx-auto d-table mb-5">
+		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
 		    		</div>
 		    	</div>
 		    </div>
 		    <div class="mx-auto mt-5 mb-1 d-table section-text">
-    			<p class="sea-blue">Lets make great things together!</p>
-        		<a href="#" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Contact us</a>
+    			<p class="text-center sea-blue">Lets make great things together!</p>
+        		<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Contact us</a>
         	</div>
         </div>
     </div>
@@ -262,14 +261,14 @@ get_header(); ?>
 </section>
 
 <!-- Instagram Feed -->
-<section class="container-fluid follow-us">
+<section class="container-fluid follow-us stripe">
     <div class="row">
         <div class="col-lg-10 offset-lg-1">
             <div id="instafeed" class="insta-feed"></div>
         </div>
         <div class="mx-auto text-center pr-5 pl-5 x-auto mt-5 mb-5 d-table section-text">
 			<p class="sea-blue">Stay in touch with our Newsletter</p>
-    		<a href="#" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Sign up</a>
+    		<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Sign up</a>
     	</div>
     </div>
 </section>

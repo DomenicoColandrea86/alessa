@@ -1,0 +1,54 @@
+
+#contactForm {
+
+	.form-group {
+    	padding: 10px 0;
+		border-bottom: 1px solid #E4E4E4;
+		position: relative;
+
+		label {
+			font-size: 14px;
+		    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+		    font-weight: 300;
+		    color: $dark-navy;
+		    line-height: 2;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		}
+
+		input {
+			color: $charcoal;
+			font-size: 22px;
+			@include sans-serif-font;
+		    font-weight: 300;
+		    letter-spacing: 2px;
+			border: 0 !important;
+			padding-left: 0 !important;
+		}
+
+		.optional {
+			position: absolute;
+			right: 0;
+			bottom: 17px;
+			color: #CCCCCC;
+			@include serif-font;
+			font-size: 16px;
+			font-style: italic;
+		    z-index: 999;
+		    letter-spacing: 1px;
+		}
+	}
+
+	button.submit {
+		font-size: 14px;
+	    letter-spacing: 4px;
+	    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+	    font-weight: 300;
+	    text-transform: uppercase;
+	    color: $mustard;
+	    margin: 0 auto;
+	    display: table;
+	    background:none;
+		border:none;
+	}
+}

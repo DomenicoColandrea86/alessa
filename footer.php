@@ -22,7 +22,7 @@
 		            	<div class="mobile mb-5">
 		            		<div class="col-12">
 			            		<p class="section-text mb-4">Sign up to our Newsletter</p>
-		        				<a href="#" class="d-block icon-arrow"></a>		
+		        				<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="d-block icon-arrow"></a>		
 		            		</div>
     					</div>
 		            	<div class="col-md-4">
@@ -68,7 +68,7 @@
 				    	</div>
 				    	<div class="col-12 copyright">
 			        		<p class="m-0 text-center">G7 Marketing is part of the Independent Network of Project Worldwide agencies</p>
-				        	<p class="m-0 text-center">All Rights resevered 2017</p>
+				        	<p class="m-0 text-center">All Rights resevered &copy; <?php echo date("Y"); ?></p>
 			        	</div>
 				    </div>
 	            </div>
@@ -77,7 +77,14 @@
 	</footer>
 </div>
 
-<?php wp_footer(); ?>
+<?php 
+
+wp_footer(); 
+
+// Load Contact Form Modal
+get_template_part( 'partials/content', 'contact' );
+
+?>
 
 </body>
 </html>

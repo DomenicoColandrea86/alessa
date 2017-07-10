@@ -20,8 +20,21 @@ A small CSS modification is required. Add this to your theme CSS.
     }
 
     .navbar-brand {
+        height: 56px;
+        width: 100%;
+        top: 10px;
+        position: relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/images/logo/G7Logo_allwhite.png');
+
         @media (max-width: 991px) {
-            display: none !important;
+            height: 30px;
+            width: 100%;
+            top: 5px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../../assets/images/logo/G7Logo_white_gold_circle_white.png');
         }
     }
     .navbar-toggler {
@@ -35,9 +48,9 @@ A small CSS modification is required. Add this to your theme CSS.
     .navbar-nav {
         > li.nav-item {
             > a {
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: 400;
-                letter-spacing: 1px;
+                letter-spacing: 2px;
                 text-transform: uppercase;
                 @include sans-serif-font;
             }
@@ -127,10 +140,6 @@ A small CSS modification is required. Add this to your theme CSS.
 }
 
 // mobile navigation
-.taptap-main-inner {
-    overflow: hidden !important;
-}
-
 .taptap-main-inner-inner {
     padding: 65px 25px !important;
 }
@@ -175,14 +184,17 @@ A small CSS modification is required. Add this to your theme CSS.
     text-align: left;
 
     h1, h2, h3, h4, h5 {
-        font-size: 14px;
+        font-size: 16px;
+        letter-spacing: 1px;
         font-weight: 200;
+        @include sans-serif-font;
     }
 
     p {
-        font-size: 16px;
+        font-size: 17px;
         margin-bottom: 10px !important;
         font-weight: 200;
+        @include sans-serif-font;
     }
 }
 
@@ -204,6 +216,44 @@ A small CSS modification is required. Add this to your theme CSS.
             height: 2px !important;
             margin: 5px 0 !important;
         }
+    }
+}
+
+body.page-template-our-work {
+    
+    #mainNav {
+        
+        .navbar-nav > li.nav-item > a {
+            color: $steel;
+        }
+
+        .navbar-brand {
+            background-image: url('../../assets/images/logo/G7Logo_alldark.png') !important;
+
+            @media (max-width: 991px) {
+                background-image: url('../../assets/images/logo/G7Logo_white_gold_circle_dark.png') !important;
+            }
+        }
+    }
+
+    .taptap-menu-button-wrapper {
+        &:not(.taptap-menu-active) {
+            .taptap-main-menu-button:before,
+            .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
+            .taptap-main-menu-button:after {
+                background-color: $steel !important;
+            }
+        }
+    }
+}
+
+body.modal-open {
+    .taptap-menu-active .taptap-main-menu-button {
+        z-index: 9999999 !important;
+    }
+
+    .taptap-menu-button-wrapper {
+        z-index: 99999 !important;
     }
 }
 

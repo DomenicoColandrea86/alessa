@@ -1,5 +1,7 @@
 
 @import "normalize";
+@import "animate";
+@import "fonts.scss";
 @import "variables.scss";
 @import "colors.scss";
 @import "mixins.scss";
@@ -8,9 +10,12 @@
 @import "icons.scss";
 @import "navbar.scss";
 @import "widgets.scss";
-@import "home.scss";
+@import "forms.scss";
+@import "modals.scss";
 @import "post.scss";
-@import "contact.scss";
 @import "footer.scss";
 @import "grid.scss";
+@import "home.scss";
+@import "our-team.scss";
+@import "our-work.scss";
 @import "bootstrap-overrides.scss";

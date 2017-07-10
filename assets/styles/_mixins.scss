@@ -68,8 +68,13 @@
 }
 
 @mixin sans-serif-font() {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Avenir-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
+
+@mixin header-font() {
+    font-family: 'Avenir-Heavy', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {

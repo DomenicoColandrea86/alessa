@@ -24,6 +24,8 @@ $(document).ready(function() {
     $('.taptap-menu-button-wrapper:not(.taptap-menu-active)').click(function() {
 	  	$('#menu-main-navigation-1 #menu-item-78').find('a').attr('data-toggle', 'modal');
     	$('#menu-main-navigation-1 #menu-item-78').find('a').attr('data-target', '.contact-us-modal');
+    	$('.icon-arrow').attr('data-toggle', 'modal');
+    	$('.icon-arrow').attr('data-target', '.contact-us-modal');
 	});
 	$('.contact-us-modal').on('show.bs.modal', function(e) {
 		$('html').css({ overflowY: 'hidden'});

@@ -137,7 +137,7 @@ get_header(); ?>
 		<div class="col-12">
 			<div class="mb-5">
 				<h2 class="mb-5 silver col-lg-6 offset-lg-3 col-md-8 offset-md-2 p-0">Stay in touch with our Newsletter</h2>
-				<a href="#" class="mt-5 mx-auto d-block icon-arrow"></a>
+				<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mt-5 mx-auto d-block icon-arrow"></a>		
 			</div>
 		</div>
 	</div>

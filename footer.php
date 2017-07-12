@@ -39,7 +39,7 @@
 			    				<div class="col-12 p-0">
 			    					<div class="desktop">
 			    						<h5 class="mb-4">Newsletter Sign up</h4>
-				        				<a href="#" class="d-block icon-arrow"></a>		
+				        				<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="d-block icon-arrow"></a>
 			    					</div>
 			    					<div class="mobile">
 						        		<h5 class="mt-5 mb-4">Follow us</h5>

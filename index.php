@@ -21,7 +21,7 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-            <h1 class="mt-3 mb-5 text-center mustard">We believe in the  power of the fan</h1>
+            <h1 class="mt-3 mb-5 text-center dark-navy">We believe in the  power of the fan</h1>
             <p class="text-center charcoal">We lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis tempus, pharetra arcu sed sit amet felis lorem tempus</p>
             <div class="mt-5 mx-auto icon-arrow-down"></div>
         </div>
@@ -69,68 +69,44 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- break -->
-<div class="break alpha mb-5"></div>
-
 <!-- Recent Projects -->
-<section class="container-fluid recent-projects">
+<section id="recentProjects" class="container-fluid recent-projects">
     <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-            <div class="row">
-	            <div class="col-lg-12">
-		    		<h2 class="mb-5 text-center mustard">Recent Projects</h2>
-		    	</div>
-	            <div class="col-lg-6 col-sm-6 portfolio-item">
-		            <div class="card card-inverse">
-					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-1.png" alt="">
-					  <div class="card-img-overlay d-flex">
-					    <h4 class="card-title text-uppercase align-self-end mr-5">We lorem ipsum dolor sit amet</h4>
-					  </div>
-					</div>
-	            </div>
-	            <div class="col-lg-6 col-sm-6 portfolio-item">
-					<div class="card card-inverse">
-					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-2.png" alt="">
-					  <div class="card-img-overlay d-flex">
-					    <h4 class="card-title text-uppercase align-self-end mr-5">We lorem ipsum dolor sit amet</h4>
-					  </div>
-					</div>
-	            </div>
-	            <div class="col-lg-6 col-sm-6 portfolio-item">
-	                <div class="card card-inverse">
-					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-3.png" alt="">
-					  <div class="card-img-overlay d-flex">
-					    <h4 class="card-title text-uppercase align-self-end mr-5">We lorem ipsum dolor sit amet</h4>
-					  </div>
-					</div>
-	            </div>
-	           	<div class="col-lg-6 col-sm-6 portfolio-item">
-	                <div class="card card-inverse">
-					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-4.png" alt="">
-					  <div class="card-img-overlay d-flex">
-					    <h4 class="card-title text-uppercase align-self-end mr-5">We lorem ipsum dolor sit amet</h4>
-					  </div>
-					</div>
-	            </div>
-	            <div class="col-lg-6 col-sm-6 portfolio-item">
-	                <div class="card card-inverse">
-					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-5.png" alt="">
-					  <div class="card-img-overlay d-flex">
-					    <h4 class="card-title text-uppercase align-self-end mr-5">We lorem ipsum dolor sit amet</h4>
-					  </div>
-					</div>
-	            </div>
-	            <div class="col-lg-6 col-sm-6 portfolio-item">
-	                <div class="card card-inverse">
-					  <img class="card-img img-fluid" src="wp-content/uploads/2017/07/recent-6.png" alt="">
-					  <div class="card-img-overlay d-flex">
-					    <h4 class="card-title text-uppercase align-self-end mr-5">We lorem ipsum dolor sit amet</h4>
-					  </div>
-					</div>
-	            </div>
-            </div>
-        </div>
-    </div>
+		<?php
+
+		$args = array(
+			'post_type' 	=> 'case-study',
+			'post__not_in'=> array(get_the_ID()),
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'posts_per_page' => 6,
+		);
+
+		$the_query = new WP_Query( $args );
+
+		if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
+
+		?>
+		
+		<div class="col-lg-6 col-md-6 col-12 case-study-item">
+	        <a href="<?php the_permalink(); ?>" class="card card-inverse">
+			  <img class="card-img img-fluid" src="<?php the_field('thumbnail'); ?>" alt="">
+			  <div class="card-img-overlay">
+			    <h4 class="card-title text-uppercase mt-2 mr-5"><?php the_field('case_highlight'); ?></h4>
+			    <div class="mt-5 icon-arrow-white"></div>
+			  </div>
+			</a>
+	    </div>
+
+		<?php endwhile; else: ?>
+
+		<p class="mx-auto text-center charcoal sub-text">Sorry, there are no case studies to display</p>
+
+		<?php
+
+		endif;
+		wp_reset_query(); ?>
+	</div>
 </section>
 
 <!-- Selected Clients -->
@@ -211,10 +187,10 @@ get_header(); ?>
 </section>
 
 <!-- break -->
-<div class="break beta mb-5"></div>
+<div class="break mb-5"></div>
 
 <!-- Say Hello -->
-<section class="container-fluid say-hello">
+<section id="sayHello" class="container-fluid say-hello">
 	<div class="row">
 		<div class="col-lg-10 offset-lg-1">
 			<div class="row">

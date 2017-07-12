@@ -108,19 +108,8 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background: no-repeat 50%;
-    background-attachment: scroll;
-    background-size: cover;
-    transition: all 0.2s linear;
     position: relative;
-
-    &.alpha {
-    	background-image: url('../../assets/images/home/bg/EPA_Fireball_TourUtah_TruckTrailer.png');
-    }
-
-    &.beta {
-    	background-image: url('../../assets/images/home/bg/EPA_Fireball_TourUtah_Bike.png');
-    }
+	background-image: url('../../assets/images/home/bg/Team.png');
 }
 
 .recent-projects {
@@ -134,13 +123,9 @@
 		}
 	}
 
-	.portfolio-item {
-		padding-right: 10px !important;
-    	padding-left: 10px !important;
-    	margin-bottom: 20px;
-    	@media (max-width: 575px) {
-	        margin-bottom: 7px;
-		}
+	.case-study-item {
+		padding-right: 0 !important;
+	    padding-left: 0 !important;
 
 	    .card {
 	    	border: none;
@@ -155,12 +140,12 @@
     		img {
     			transition: all 0.2s linear;
 		    	object-fit: cover;
-		    	max-height: 300px;
-		    	height: 300px;
+		    	max-height: 100%;
+		    	height: 415px;
 
 		    	@media (max-width: 575px) {
-			        max-height: 220px;
-		    		height: 220px;
+			        max-height: 100%;
+		    		height: 210px;
 				}
 		    }
 
@@ -170,8 +155,9 @@
 
 			.card-img-overlay {
 				opacity: 0;
+				padding: 2rem;
 				transition: all 0.2s linear;
-			    background: rgba(0, 0, 0, 0.6);
+			    background: rgba(14, 24, 32, .9);
 
 			    @media (max-width: 575px) {
 			     	opacity: 1;
@@ -181,9 +167,13 @@
 			.card-title {
 			    color: #fff;
 			    letter-spacing: 2px;
-			    font-size: 28px;
+			    font-size: 45px;
 			    line-height: 1.3;
 			    @include header-font;
+
+			    @media (max-width: 768px) {
+			        font-size: 25px;
+				}
 			}
 	    }
 	}

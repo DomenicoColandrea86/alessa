@@ -145,6 +145,11 @@ require_once('functions/navigation/G7NavwalkerBase.php');
 require_once('functions/navigation/G7Navwalker.php');
 
 /**
+ * Register Custom Post Types
+ */
+require_once('functions/post-types/case-study.php');
+
+/**
  * Register Custom Widgets
  */
 require_once('functions/widgets/G7MobileNavigation.php');

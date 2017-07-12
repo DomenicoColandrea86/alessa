@@ -5,6 +5,14 @@ import Instafeed from 'instafeed.js';
 require('../assets/styles/styles.scss');
 
 $(document).ready(function() {
+	// Smooth scrolling nav links
+	$('#mainNav').find('li:not(#menu-item-58)').find('a').click(function(e) {
+		e.preventDefault();
+		const section = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(section).offset().top,
+		});
+	});
 
 	// Setup `InstaFeed` gallery
 	const feed = new Instafeed({
@@ -18,15 +26,6 @@ $(document).ready(function() {
 
 	feed.run();
 
-	// Setup `contact us` modal
-    $('#menu-item-78').find('a').attr('data-toggle', 'modal');
-    $('#menu-item-78').find('a').attr('data-target', '.contact-us-modal');
-    $('.taptap-menu-button-wrapper:not(.taptap-menu-active)').click(function() {
-	  	$('#menu-main-navigation-1 #menu-item-78').find('a').attr('data-toggle', 'modal');
-    	$('#menu-main-navigation-1 #menu-item-78').find('a').attr('data-target', '.contact-us-modal');
-    	$('.icon-arrow').attr('data-toggle', 'modal');
-    	$('.icon-arrow').attr('data-target', '.contact-us-modal');
-	});
 	$('.contact-us-modal').on('show.bs.modal', function(e) {
 		$('html').css({ overflowY: 'hidden'});
 	});

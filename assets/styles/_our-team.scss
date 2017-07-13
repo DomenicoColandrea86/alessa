@@ -1,86 +1,35 @@
 
 .our-team-hero {
-    height: 500px;
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background: no-repeat 50%;
-    background-image: url('../../assets/images/our-team/our-team-hero.png');
-    background-attachment: scroll;
-    background-size: cover;
-    transition: all 0.2s linear;
-    position: relative;
-    @media (max-width: 768px) {
-		height: 300px;
-	}
+	.content {
+		height: 600px;
+	    width: 100%;
+	    display: inline-flex;
+	    position: relative;
+	    justify-content: center;
+	    transition: all 0.2s linear;
 
-	h1 {
-		display: table-cell;
-	    vertical-align: middle;
-	    font-size: 70px;
-	    color: #fff;
-	    line-height: 1.2;
-	    text-align: center;
-	    @include header-font;
-
-    	@media (max-width: 768px) {
-			font-size: 30px;
-		}
-	}
-}
-
-.intro {
-	p:first-of-type {
-		margin-top: 50px;
-
-		@media (max-width: 768px) {
-			margin-top: 0;
-		}
-	}
-
-	.sub-text {
-		font-size: 18px;
-	    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
-	    font-weight: 300;
-		color: $dark-navy;
-
-		@media (max-width: 768px) {
-			color: $cloudy;
-		}
-	}
-}
-
-.masonry-gallery {
-	.card-columns:first-of-type {
-		column-count: 1;
-	}
-	.card-columns {
-		column-count: 2;
-		column-gap: 10px;
-
-		@media (max-width: 576px) {
-			column-count: 1;
+	    @media (max-width: 768px) {
+			height: 400px;
 		}
 
-		.card {
-			border: 0 !important;
-    		border-radius: 0 !important;
+		img {
+			object-fit: cover;
+		}
 
-    		@media (max-width: 576px) {
-    			margin-bottom: 10px;
-			}
+		h1 {
+			display: inline-block;
+		    font-size: 70px;
+		    color: #fff;
+		    line-height: 1.2;
+		    text-align: center;
+		    @include header-font;
+		    position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    transform: translate(-50%,-50%);
 
-			.card-img-top {
-			    border-radius: 0 !important;
-			}
-			img {
-				width: 100%;
-
-				@media (max-width: 576px) {
-					object-fit: cover;
-    				height: 240px;
-				}
+			@media (max-width: 768px) {
+				font-size: 35px;
 			}
 		}
 	}
@@ -113,24 +62,63 @@
 	}
 }
 
-.stay-in-touch {
-	h2 {
-		font-size: 44px;
-		letter-spacing: 1px;
-		text-align: center;
-		@include header-font;
+.carousel {
+	.carousel-inner {
+	    height: auto;
+
+	    .carousel-item {
+	    	.item {
+	    		.card {
+	    			border: 0;
+	    			height: 600px;
+	    			border-radius: 0;
+				    flex-direction: row;
+
+				    @media (max-width: 1024px) {
+				    	height: 550px;
+
+						&:nth-of-type(2) {
+							display: none !important;
+						}
+					}
+
+					@media (max-width: 650px) {
+						height: 500px;
+
+						&:last-of-type {
+							display: none !important;
+						}
+					}
+
+				    img {
+						object-fit: cover;
+				    }
+				}
+	    	}
+	    }
 	}
 
-	@media (max-width: 768px) {
+	.carousel-control-next,
+	.carousel-control-prev {
+		width: 10%;
+	}
+}
 
-		h2 {
-			font-size: 34px;
-			text-align: left;
-			padding-right: 50px;
+.map {
+	.content {
+		height: 600px;
+	    width: 100%;
+	    display: inline-flex;
+	    position: relative;
+	    justify-content: center;
+	    transition: all 0.2s linear;
+
+	    @media (max-width: 768px) {
+			height: 400px;
 		}
 
-		.icon-arrow {
-			display: none !important;
+		img {
+			object-fit: cover;
 		}
 	}
 }

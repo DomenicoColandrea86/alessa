@@ -193,43 +193,40 @@ get_header(); ?>
 <section id="sayHello" class="container-fluid say-hello">
 	<div class="row">
 		<div class="col-lg-10 offset-lg-1">
-			<div class="row">
+			<div class="row vertical-align">
 				<div class="col-lg-12">
 		    		<h2 class="mx-auto mb-5 text-center mustard">Say Hello</h2>
-		    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Business Inquiries</p>
-		    		<p class="mx-auto d-table text-center mustard section-text">Brian.Thurman@g7marketing.com</p>
-		    		<br>
-		    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">College Internships</p>
-		    		<p class="mx-auto d-table text-center dark-navy section-text">Lauren.White@g7marketing.com</p>
-		    		<br>
-		    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Stop by</p>
-		    		<p class="mx-auto d-table text-center dark-navy section-text">801 18th Avenue South</p>
-		    		<p class="mx-auto d-table text-center dark-navy section-text">Nashville, Tennessee 37203</p>
-		    		<p class="mx-auto d-table text-center dark-navy section-text">615-988-3422</p>
-		    		<br>
-		    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Follow us</p>
-		    		<ul class="mt-4 mx-auto d-table list-group">
-		    			<li>
-		    				<a href="http://facebook.com">
+		    	</div>
+		    	<div class="col-lg-6 mb-4">
+					<div>
+						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Business Inquiries</p>
+			    		<p class="mx-auto d-table text-center charcoal section-text">Brian.Thurman@g7marketing.com</p>
+			    		<br>
+			    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">College Internships</p>
+		    			<p class="mx-auto d-table text-center charcoal section-text">Lauren.White@g7marketing.com</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-4">
+					<div class="align-self-end">
+						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Stop by</p>
+			    		<p class="mx-auto d-table text-center charcoal section-text">801 18th Avenue South</p>
+			    		<p class="mx-auto d-table text-center charcoal section-text">Nashville, Tennessee 37203</p>
+			    		<p class="mx-auto d-table text-center charcoal section-text">615-988-3422</p>
+			    		<div class="d-flex justify-content-between col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-8 offset-sm-2 mt-2">
+			        		<a href="http://facebook.com">
 		    					<i class="mustard fa fa-2x fa-facebook" aria-hidden="true"></i>
 		    				</a>
-		    			</li>
-		    			<li>
 		    				<a href="http://instagram.com">
 		    					<i class="mustard fa fa-2x fa-instagram" aria-hidden="true"></i>
 		    				</a>
-		    			</li>
-		    			<li>
 		    				<a href="http://youtube.com">
 		    					<i class="mustard fa fa-2x fa-youtube-play" aria-hidden="true"></i>
 		    				</a>
-		    			</li>
-		    			<li>
 		    				<a href="http://twitter.com">
 		    					<i class="mustard fa fa-2x fa-twitter" aria-hidden="true"></i>
 		    				</a>
-		    			</li>
-		    		</ul>
+			        	</div>
+					</div>
 		    	</div>
 			</div>
 		</div>
@@ -242,10 +239,17 @@ get_header(); ?>
         <div class="col-lg-10 offset-lg-1">
             <div id="instafeed" class="insta-feed"></div>
         </div>
+    </div>
+</section>
+
+<!-- Stay in Touch -->
+<section class="container-fluid stay-in-touch">
+    <div class="row">
         <div class="mx-auto text-center pr-5 pl-5 x-auto mt-5 mb-5 d-table section-text">
-			<p class="sea-blue">Stay in touch with our Newsletter</p>
-    		<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Sign up</a>
-    	</div>
+			<h2 class="mx-auto text-center mustard">Stay in Touch</h2>
+			<p class="sea-blue">Sign up to our monthly Newsletter</p>
+			<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Sign up</a>
+		</div>
     </div>
 </section>
 

@@ -67,8 +67,8 @@
 					        <div class="branding"></div>
 				    	</div>
 				    	<div class="col-12 copyright">
-			        		<p class="m-0 text-center">G7 Marketing is part of the Independent Network of Project Worldwide agencies</p>
-				        	<p class="m-0 text-center">All Rights resevered &copy; <?php echo date("Y"); ?></p>
+			        		<p class="m-0 text-center">G7 Marketing is part of the Independent Network of Project Worldwide agencies.</p>
+				        	<p class="m-0 text-center">Copyright &copy; <?php echo date("Y");?> <?php echo get_bloginfo('name')?>. All Rights Reserved.</p>
 			        	</div>
 				    </div>
 	            </div>

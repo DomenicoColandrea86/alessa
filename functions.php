@@ -102,7 +102,7 @@ function g7_marketing_widgets_init() {
 add_action( 'widgets_init', 'g7_marketing_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts and styles.e
  */
 function g7_marketing_scripts() {
 	wp_enqueue_style( 'g7-marketing-style', get_template_directory_uri() . '/dist/app.bundle.css' );
@@ -148,6 +148,7 @@ require_once('functions/navigation/G7Navwalker.php');
  * Register Custom Post Types
  */
 require_once('functions/post-types/case-study.php');
+require_once('functions/post-types/team-member.php');
 
 /**
  * Register Custom Widgets

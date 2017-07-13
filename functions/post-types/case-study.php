@@ -4,8 +4,8 @@
 function add_case_study() {
     $args = array(
         'labels' => array(
-            'name' => 'Case Study',
-            'singular_name' => 'Case Studies'
+            'name' => 'Case Studies',
+            'singular_name' => 'Case Study'
         ),
         'public' => true,
         'capability_type' => 'post',

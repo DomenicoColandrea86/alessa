@@ -238,29 +238,6 @@
 }
 
 .follow-us {
-	nav {
-		display: table;
-		margin-bottom: 40px;
-
-		.nav-link {
-			float: left;
-			font-size: 18px;
-			padding: 0.25em 1em;
-			@include sans-serif-font();
-
-			&:not(:last-child) {
-			    border-right:1px solid #E4E4E4;
-			}
-
-			@media (max-width: 768px) {
-		        float: none;
-
-		        &:not(:last-child) {
-				    border-right: none;
-				}
-			}
-		}
-	}
 
 	.insta-feed {
 		.image {
@@ -276,6 +253,18 @@
 		      height: 100%;
 		      transform: translateX(-50%) translateY(-50%);
 		  	}
+		}
+	}
+}
+
+.stay-in-touch {
+	h2 {
+		font-size: 40px;
+    	letter-spacing: 1px;
+    	@include header-font;
+
+    	@media (max-width: 768px) {
+    		font-size: 28px;
 		}
 	}
 }

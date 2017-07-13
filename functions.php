@@ -149,6 +149,8 @@ require_once('functions/navigation/G7Navwalker.php');
  */
 require_once('functions/post-types/case-study.php');
 require_once('functions/post-types/team-member.php');
+require_once('functions/post-types/clients.php');
+require_once('functions/post-types/testimonials.php');
 
 /**
  * Register Custom Widgets

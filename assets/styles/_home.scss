@@ -201,6 +201,25 @@
 	}
 }
 
+.testimonials {
+	blockquote {
+		font-family: Georgia, Times, "Times New Roman", serif;
+		font-size: 32px;
+		font-style: italic;
+
+		@media (max-width: 768px) {
+			font-size: 28px;
+		}
+	}
+
+	p {
+		font-size: 14px;
+	    letter-spacing: 2px;
+	    color: #314758;
+	    @include sans-serif-font;
+	}
+}
+
 .say-hello {
 	h2 {
 		font-size: 40px;

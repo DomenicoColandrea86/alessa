@@ -117,71 +117,86 @@ get_header(); ?>
         		<div class="col-lg-12">
 		    		<h2 class="mx-auto mb-5 text-center mustard">Selected Clients</h2>
 		    	</div>
-		    	<div class="col-md-4 col-6">
+		    	<?php
+
+				$args = array(
+					'post_type' 	 => 'clients',
+					'orderby' 		 => 'ASC',
+					'posts_per_page' => -1,
+				);
+
+				$the_query = new WP_Query( $args );
+
+				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+
+				?>
+				
+				<div class="col-md-4 col-6">
 		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
+		    			<img class="mx-auto d-table" src="<?php the_field('logo'); ?>" alt="">
 		    		</div>
 		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/salesforce-logo.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/salesforce-logo.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/salesforce-logo.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/redbull-logo-E79B4A66FA-seeklogo.com_.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/salesforce-logo.png'; ?>" alt="">
-		    		</div>
-		    	</div>
-		    	<div class="col-md-4 col-6">
-		    		<div class="client-item mx-auto d-table mb-5">
-		    			<img class="mx-auto d-table" src="<?php echo wp_upload_dir()['baseurl'] . '/2017/07/coke-1.png'; ?>" alt="">
-		    		</div>
-		    	</div>
+				
+				<?php endwhile; else: ?>
+
+				<p class="mx-auto text-center charcoal sub-text">Sorry, there are no team members to display</p>
+
+				<?php
+
+				endif;
+				wp_reset_query(); ?>
 		    </div>
-		    <div class="mx-auto mt-5 mb-1 d-table section-text">
-    			<p class="text-center sea-blue">Lets make great things together!</p>
-        		<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Contact us</a>
-        	</div>
+		    
+        	<!-- Testimonials Carousel -->
+			<div id="testimonialsCarousel" class="testimonials carousel slide" data-ride="carousel">
+				<div class="col-10 offset-1">
+					<div class="carousel-inner" role="listbox">
+						<?php
+
+						$c = 0;
+	        			$class = '';
+
+						$args = array(
+							'post_type' 	 => 'testimonials',
+							'orderby' 		 => 'ASC',
+							'posts_per_page' => -1,
+						);
+
+						$the_query = new WP_Query( $args );
+
+						if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+						$c++;
+
+						if ( $c == 1 ) $class .= ' active';
+	            		else $class = '';
+						
+						?>
+						
+						<div class="carousel-item <?php echo $class; ?>">
+							<div class="item d-table mx-auto">
+								<div class="mx-auto mt-5 mb-1 d-table section-text">
+					    			<blockquote class="text-center dark-navy">&ldquo;<?php the_field('testimonial'); ?></blockquote>
+					        		<p class="text-center sea-blue"><?php the_field('full_name'); ?>, <?php the_field('company'); ?>&rdquo;</p>
+					        	</div>
+							</div>
+						</div>
+						
+						<?php 
+						endwhile;
+						endif;
+						wp_reset_query(); ?>
+
+					</div>	
+				</div>
+				<a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
+					<i class="fa fa-3x fa-angle-left mustard" aria-hidden="true"></i>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
+					<i class="fa fa-3x fa-angle-right mustard" aria-hidden="true"></i>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
         </div>
     </div>
 </section>

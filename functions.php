@@ -151,6 +151,9 @@ require_once('functions/post-types/case-study.php');
 require_once('functions/post-types/team-member.php');
 require_once('functions/post-types/clients.php');
 require_once('functions/post-types/testimonials.php');
+require_once('functions/post-types/what-we-do.php');
+require_once('functions/post-types/say-hello.php');
+require_once('functions/post-types/social-media.php');
 
 /**
  * Register Custom Widgets

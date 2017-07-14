@@ -1,50 +1,68 @@
 
-.hero {
-    height: 500px;
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background: no-repeat 50%;
-    background-image: url('../../assets/images/home/hero/Hero.png');
-    background-attachment: scroll;
-    background-size: cover;
-    transition: all 0.2s linear;
-    position: relative;
-    @media (max-width: 768px) {
-		height: 300px;
-	}
 
-	h1 {
-		display: table-cell;
-	    vertical-align: middle;
-	    font-size: 70px;
-	    color: #fff;
-	    line-height: 1.2;
-	    text-align: center;
-	    @include header-font;
+.home-slider {
+	.content {
+		max-height: 600px;
+	    width: 100%;
+	    display: inline-flex;
+	    position: relative;
+	    justify-content: center;
+	    transition: all 0.2s linear;
 
-    	@media (max-width: 768px) {
-			font-size: 30px;
+		img {
+			width: 100%;
+			object-fit: cover;
+			height: 600px;
+
+			@media (max-width: 768px) {
+				height: 400px;
+			}
 		}
 
-		@media (max-width: 575px) {
-			padding: 0 10px;
+		h1 {
+			display: inline-block;
+		    font-size: 70px;
+		    color: #fff;
+		    line-height: 1.2;
+		    text-align: center;
+		    @include header-font;
+		    position: absolute;
+		    left: 50%;
+		    top: 40%;
+		    transform: translate(-50%,-50%);
+
+			@media (max-width: 768px) {
+				width: 80%;
+				font-size: 30px;
+			}
 		}
-	}
 
-	.case-study {
-	    color: white;
-	    position: absolute;
-	    bottom: 35px;
-	    font-weight: 300;
-	    font-size: 14px;
-	    letter-spacing: 4px;	
-	    @include sans-serif-font;
+		.case-study {
+		    display: inline-block;
+		    left: 50%;
+		    top: 75%;
+		    text-align: center;
+		    transform: translate(-50%,-50%);
+		    color: #fff;
+		    border: 1px solid white;
+		    padding: 25px;
+		    border-radius: 8px;
+		    line-height: 14px;
+		    position: absolute;
+		    font-weight: 300;
+		    font-size: 14px;
+		    letter-spacing: 4px;
+		    @include sans-serif-font;
 
-	    &:hover {
-	    	text-decoration: none;
-	    }
+		    &:hover, &:focus {
+		    	text-decoration: none;
+		    }
+
+			@media (max-width: 768px) {
+				width: 60%;
+				padding: 15px;
+			}
+		}
 	}
 }
 
@@ -100,16 +118,6 @@
 	    letter-spacing: 1px;
 		@include sans-serif-font;
 	}
-}
-
-.break {
-	height: 500px;
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-	background-image: url('../../assets/images/home/bg/Team.png');
 }
 
 .recent-projects {

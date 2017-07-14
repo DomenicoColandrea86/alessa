@@ -75,125 +75,38 @@ get_header(); ?>
 </section>
 
 <!-- Media Carousel -->
-<section class="container-fluid intro">
-    <div class="row">
-        <div id="ourTeamCarousel" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active">
-					<div class="item">
-						<div class="row">
-							<div class="align-self-end">
-								<div class="d-flex justify-content-between">
-									<a class="card card-inverse" href="#">
-										<img class="img-fluid" alt="" src="<?php the_field('slider_1'); ?>">
-									</a>
-									<a class="card card-inverse" href="#">
-										<img class="img-fluid" alt="" src="<?php the_field('slider_2'); ?>">
-									</a>
-									<a class="card card-inverse" href="#">
-										<img class="img-fluid" alt="" src="<?php the_field('slider_3'); ?>">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="item">
-						<div class="row">
-							<div class="align-self-end">
-								<div class="d-flex justify-content-between">
-									<a class="card card-inverse" href="#">
-										<img class="img-fluid" alt="" src="<?php the_field('slider_4'); ?>">
-									</a>
-									<a class="card card-inverse" href="#">
-										<img class="img-fluid" alt="" src="<?php the_field('slider_5'); ?>">
-									</a>
-									<a class="card card-inverse" href="#">
-										<img class="img-fluid" alt="" src="<?php the_field('slider_6'); ?>">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<a class="carousel-control-prev" href="#ourTeamCarousel" role="button" data-slide="prev">
-				<i class="fa fa-3x fa-angle-left mustard" aria-hidden="true"></i>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#ourTeamCarousel" role="button" data-slide="next">
-				<i class="fa fa-3x fa-angle-right mustard" aria-hidden="true"></i>
-				<span class="sr-only">Next</span>
-			</a>
+<div class="container-fluid our-team-carousel">
+	<div class="row">
+		<?php
+
+		if( have_rows('carousel') ):
+
+		echo '<div id="ourTeamCarousel" class="col-12 p-0 content">';
+		
+		while ( have_rows('carousel') ) : the_row();
+		 
+		$image = get_sub_field('image');
+
+		?>
+
+		<div>
+			<img src="<?php echo $image['url']; ?>"/>
 		</div>
-    </div>
-</section>                       
+
+		<?php 
+		
+		endwhile;
+		
+		echo '</div>';
+
+		endif;
+		
+		?>
+	</div>
+</div>       
 
 <!-- Say Hello -->
-<section id="sayHello" class="container-fluid say-hello">
-	<div class="row">
-		<div class="col-lg-10 offset-lg-1">
-			<div class="row vertical-align">
-				<div class="col-lg-12">
-		    		<h2 class="mx-auto mb-5 text-center mustard">Say Hello</h2>
-		    	</div>
-		    	<div class="col-lg-6 mb-4">
-					<div>
-						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Business Inquiries</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('business_inquiries'); ?></p>
-			    		<br>
-			    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">College Internships</p>
-		    			<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('college_internships'); ?></p>
-					</div>
-				</div>
-				<div class="col-lg-6 mb-4">
-					<div class="align-self-end">
-						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Stop by</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('address'); ?></p>
-			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zipcode'); ?></p>
-			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('phone'); ?></p>
-			    		<div class="d-flex justify-content-between col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-8 offset-sm-2 mt-2">
-
-			    		<?php if ( get_field( 'facebook' ) ): ?>
-
-						<a href="<?php the_field('facebook'); ?>">
-	    					<i class="mustard fa fa-2x fa-facebook" aria-hidden="true"></i>
-	    				</a>
-
-						<?php endif; ?>
-
-						<?php if ( get_field( 'instagram' ) ): ?>
-
-						<a href="<?php the_field('instagram'); ?>">
-	    					<i class="mustard fa fa-2x fa-instagram" aria-hidden="true"></i>
-	    				</a>
-
-						<?php endif; ?>
-
-						<?php if ( get_field( 'youtube' ) ): ?>
-
-						<a href="<?php the_field('youtube'); ?>">
-	    					<i class="mustard fa fa-2x fa-youtube-play" aria-hidden="true"></i>
-	    				</a>
-
-						<?php endif; ?>
-
-						<?php if ( get_field( 'twitter' ) ): ?>
-
-						<a href="<?php the_field('twitter'); ?>">
-	    					<i class="mustard fa fa-2x fa-twitter" aria-hidden="true"></i>
-	    				</a>
-
-						<?php endif; ?>
-			        	</div>
-					</div>
-		    	</div>
-			</div>
-		</div>
-	</div>
-</section>
+<?php get_template_part( 'partials/content', 'sayhello' ); ?>
 
 <!-- Map -->
 <section class="container-fluid map stripe pt-3">

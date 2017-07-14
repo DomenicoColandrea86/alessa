@@ -62,45 +62,64 @@
 	}
 }
 
-.carousel {
-	.carousel-inner {
-	    height: auto;
+.our-team-carousel {
+	.content {
+		max-height: 600px;
+	    width: 100%;
+	    display: inline-flex;
+	    position: relative;
+	    justify-content: center;
+	    transition: all 0.2s linear;
 
-	    .carousel-item {
-	    	.item {
-	    		.card {
-	    			border: 0;
-	    			height: 600px;
-	    			border-radius: 0;
-				    flex-direction: row;
+		img {
+			width: 100%;
+			object-fit: cover;
+			height: 600px;
 
-				    @media (max-width: 1024px) {
-				    	height: 550px;
+			@media (max-width: 768px) {
+				height: 400px;
+			}
+		}
 
-						&:nth-of-type(2) {
-							display: none !important;
-						}
-					}
+		.slick-prev,
+		.slick-next {
+		    font-size: 0;
+		    position: absolute;
+		    bottom: 20px;
+		    color: $mustard;
+		    border: 0;
+		    background: none;
+		    z-index: 1000;
 
-					@media (max-width: 650px) {
-						height: 500px;
+		    &:before,
+		    &:after {
+		    	content: '';
+		    }
+		}
 
-						&:last-of-type {
-							display: none !important;
-						}
-					}
+		.slick-prev {
+		    left: 20px;
+		}
 
-				    img {
-						object-fit: cover;
-				    }
-				}
-	    	}
-	    }
-	}
+		.slick-prev:after {
+			content: "\f104";
+		    font: 40px/1 'FontAwesome';
+		}
 
-	.carousel-control-next,
-	.carousel-control-prev {
-		width: 10%;
+		.slick-next {
+		    right: 20px;
+		    text-align: right;
+		}
+
+		.slick-next:after {
+			content: "\f105";
+		    font: 40px/1 'FontAwesome';
+		}
+
+		.slick-prev:hover:after,
+		.slick-next:hover:after {
+		    color: $mustard;
+		}
 	}
 }
 

@@ -8,21 +8,49 @@
 get_header(); ?>
 
 <!-- Hero -->
-<div class="hero">
+
+<div class="container-fluid home-slider">
 	<div class="row">
-		<div class="col-md-8 offset-md-2">
-			<h1>We lorem ipsum dolor sit amet</h1>
+		<?php
+
+		if( have_rows('slider') ):
+
+		echo '<div id="homeSlider" class="col-12 p-0 content">';
+		
+		while ( have_rows('slider') ) : the_row();
+		 
+		$image = get_sub_field('image');
+		$text = get_sub_field('text');
+		$link = get_sub_field('case_study_link');
+
+		?>
+
+		<div>
+			<img src="<?php echo $image['url']; ?>"/>
+			<div>
+				<h1><?php echo $text ?></h1>
+				<a href="<?php echo $link ?>" class="case-study text-uppercase">View case study</a>
+			</div>
 		</div>
+
+		<?php 
+		
+		endwhile;
+		
+		echo '</div>';
+
+		endif;
+		
+		?>
 	</div>
-	<a href="#" class="case-study text-uppercase">View case study</a>
 </div>
 
 <!-- Introduction -->
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-            <h1 class="mt-3 mb-5 text-center dark-navy">We believe in the  power of the fan</h1>
-            <p class="text-center charcoal">We lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet felis tempus, pharetra arcu sed sit amet felis lorem tempus</p>
+            <h1 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h1>
+            <p class="text-center charcoal"><?php the_field('body'); ?></p>
             <div class="mt-5 mx-auto icon-arrow-down"></div>
         </div>
     </div>
@@ -36,34 +64,37 @@ get_header(); ?>
 	    		<div class="col-lg-12">
 		    		<h2 class="mb-5 text-center mustard">What we do</h2>
 		    	</div>
-		    	<div class="col-lg-6 mb-4">
-					<div class="col-lg-8 offset-lg-2">
-						<h4 class="mb-4 dark-navy">Entertainment <br>Strategy</h4>
-    					<p class="dark-navy">Sponsorship &amp; Endorsement, Product Placement &amp; Integration, Branded Content, Music Licensing &amp; Supervision and More</p>
-					</div>
-				</div>
+
+		    	<?php
+
+				$args = array(
+					'post_type' 	 => 'what-we-do',
+					'order' 		 => 'ASC',
+					'posts_per_page' => -1,
+				);
+
+				$the_query = new WP_Query( $args );
+
+				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
+
+				?>
 				<div class="col-lg-6 mb-4">
 					<div class="col-lg-8 offset-lg-2">
-						<h4 class="mb-4 dark-navy">Talent <br>Booking</h4>
-    					<p class="dark-navy">Music Talent, Speaker Talent, Comedy &amp; Hosts, Culinary, Performance Art and More</p>
+						<h4 class="mb-4 dark-navy"><?php the_field('title'); ?></h4>
+    					<p class="dark-navy"><?php the_field('description'); ?></p>
 					</div>
 				</div>
-				<div class="col-lg-6 mb-4">
-					<div class="col-lg-8 offset-lg-2">
-						<h4 class="mb-4 dark-navy">Event <br>Production</h4>
-    					<p class="dark-navy">Design &amp; Fabrication, Mobile Tours, Show Production, Pop-Up Stores, Sponsorship Activation, Grassroots Promotion</p>
-					</div>
-				</div>
-				<div class="col-lg-6 mb-4">
-					<div class="col-lg-8 offset-lg-2">
-						<h4 class="dark-navy">Premium <br>Experiences</h4>
-	    				<p class="dark-navy">Private Events, Custom Tours &amp; Excursions, Culinary Experiences and More</p>
-					</div>
-				</div>
+				<?php 
+
+				endwhile;
+
+				endif;
+
+				wp_reset_query(); ?>
 			</div>
     		<div class="mx-auto mt-5 mb-1 d-table section-text">
     			<p class="sea-blue">Full list of capabilities</p>
-        		<a href="#" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Download PDF</a>
+        		<a href="<?php the_field('download_pdf'); ?>" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight" download>Download PDF</a>
         	</div>
         </div>
     </div>
@@ -175,8 +206,8 @@ get_header(); ?>
 						<div class="carousel-item <?php echo $class; ?>">
 							<div class="item d-table mx-auto">
 								<div class="mx-auto mt-5 mb-1 d-table section-text">
-					    			<blockquote class="text-center dark-navy">&ldquo;<?php the_field('testimonial'); ?></blockquote>
-					        		<p class="text-center sea-blue"><?php the_field('full_name'); ?>, <?php the_field('company'); ?>&rdquo;</p>
+					    			<blockquote class="text-center dark-navy">&ldquo;<?php the_field('testimonial'); ?>&rdquo;</blockquote>
+					        		<p class="text-center sea-blue"><?php the_field('full_name'); ?>, <?php the_field('company'); ?></p>
 					        	</div>
 							</div>
 						</div>
@@ -202,51 +233,10 @@ get_header(); ?>
 </section>
 
 <!-- break -->
-<div class="break mb-5"></div>
+<img class="showcase mb-5 mt-4" src="<?php the_field('showcase'); ?>" alt="">
 
 <!-- Say Hello -->
-<section id="sayHello" class="container-fluid say-hello">
-	<div class="row">
-		<div class="col-lg-10 offset-lg-1">
-			<div class="row vertical-align">
-				<div class="col-lg-12">
-		    		<h2 class="mx-auto mb-5 text-center mustard">Say Hello</h2>
-		    	</div>
-		    	<div class="col-lg-6 mb-4">
-					<div>
-						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Business Inquiries</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text">Brian.Thurman@g7marketing.com</p>
-			    		<br>
-			    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">College Internships</p>
-		    			<p class="mx-auto d-table text-center charcoal section-text">Lauren.White@g7marketing.com</p>
-					</div>
-				</div>
-				<div class="col-lg-6 mb-4">
-					<div class="align-self-end">
-						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Stop by</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text">801 18th Avenue South</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text">Nashville, Tennessee 37203</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text">615-988-3422</p>
-			    		<div class="d-flex justify-content-between col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-8 offset-sm-2 mt-2">
-			        		<a href="http://facebook.com">
-		    					<i class="mustard fa fa-2x fa-facebook" aria-hidden="true"></i>
-		    				</a>
-		    				<a href="http://instagram.com">
-		    					<i class="mustard fa fa-2x fa-instagram" aria-hidden="true"></i>
-		    				</a>
-		    				<a href="http://youtube.com">
-		    					<i class="mustard fa fa-2x fa-youtube-play" aria-hidden="true"></i>
-		    				</a>
-		    				<a href="http://twitter.com">
-		    					<i class="mustard fa fa-2x fa-twitter" aria-hidden="true"></i>
-		    				</a>
-			        	</div>
-					</div>
-		    	</div>
-			</div>
-		</div>
-	</div>
-</section>
+<?php get_template_part( 'partials/content', 'sayhello' ); ?>
 
 <!-- Instagram Feed -->
 <section class="container-fluid follow-us stripe">

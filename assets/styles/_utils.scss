@@ -1,3 +1,57 @@
+
+.section-highlight {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+    font-weight: 300;
+}
+
+.section-text {
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    @include sans-serif-font;
+}
+
+.stripe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all 0.2s linear;
+    background-image: url('../../assets/images/bg/stripe.png');
+
+    @media (max-width: 768px) {
+        background-size: cover;
+    }
+}
+
+// Grid for IG Feed
+.col-ig {
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-ig {
+        width: 50%;
+        float: left;
+    }
+}
+
 .vertical-align {
   display: flex;
   flex-direction: row;
@@ -16,6 +70,46 @@
 
 .vertical-align > [class^="col-"] > div,
 .vertical-align > [class*=" col-"] > div {
-  /* flex: 1; */
   flex-grow: 1;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 0 auto;
+  font-size: 5px;
+  position: absolute;
+  top: calc(50% - 5em);
+  left: calc(50% - 5em);
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(28,41,55, 0.2);
+  border-right: 1.1em solid rgba(28,41,55, 0.2);
+  border-bottom: 1.1em solid rgba(28,41,55, 0.2);
+  border-left: 1.1em solid #1c2937;
+  transform: translateZ(0);
+  animation: g7loader 0.9s infinite linear;
+}
+@-webkit-keyframes g7loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes g7loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

@@ -1,54 +1,275 @@
 
-#contactForm {
+.e2ma_signup_image_container {
+	display: none;
+}
 
-	.form-group {
-    	padding: 10px 0;
-		border-bottom: 1px solid #E4E4E4;
-		position: relative;
+.e2ma_signup_message {
+	font-size: 22px !important;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+    font-weight: 300 !important;
+    color: #4c4f54 !important;
+    line-height: 2 !important;
 
-		label {
-			font-size: 14px;
+    > div > span {
+    	font-size: 22px !important;
+	    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+	    font-weight: 300 !important;
+	    color: #4c4f54 !important;
+	    line-height: 2 !important;
+
+	    @media (max-width: 1024px) {
+			font-size: 20px !important;
+			line-height: 2 !important;
+		}
+
+	    > div {
+	    	text-align: left !important;
+
+	    	&:first-of-type {
+	    		margin-bottom: 20px;
+
+	    		@media (max-width: 1024px) {
+					margin-bottom: 10px;
+				}
+	    	}
+
+	    	&:nth-of-type(2) {
+	    		display: none;
+	    	}
+
+	    	&:last-of-type {
+				display: none;
+	    	}
+	   //  	&:last-of-type {
+				// font-size: 18px;
+				// font-weight: 300;
+				// color: #253746;
+				// line-height: 2;
+				// font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+				// margin-bottom: 40px;
+				
+				// @media (max-width: 1024px) {
+				// 	color: #a3a3a3;
+				// 	font-size: 16px;
+    // 				line-height: 1.8;
+    // 				margin-bottom: 20px;
+				// }
+	   //  	}
+	    }
+    }
+}
+
+.e2ma_signup_form_container {
+	.e2ma_signup_form_row {
+		margin-bottom: 1rem;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+
+		padding: 10px 0 !important;
+		border-bottom: 1px solid #E4E4E4 !important;
+		position: relative !important;
+
+
+		.e2ma_signup_form_label {
+			padding-top: calc(0.5rem - 1px * 2);
+			padding-bottom: calc(0.5rem - 1px * 2);
+			margin-bottom: 0;
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+			padding-right: 15px;
+			padding-left: 15px;
+			flex: 0 0 20%;
+			max-width: 20%;
+
+			font-size: 14px !important;
 		    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
-		    font-weight: 300;
-		    color: $dark-navy;
-		    line-height: 2;
-		    letter-spacing: 2px;
-		    text-transform: uppercase;
+		    font-weight: 300 !important;
+		    color: $dark-navy !important;
+		    line-height: 2 !important;
+		    letter-spacing: 2px !important;
+		    text-transform: uppercase !important;
+
+		    @media (max-width: 1024px) {
+				flex: 0 0 100%;
+    			max-width: 100%;
+			}
+
+		    .e2ma_signup_form_required_asterix {
+		    	display: none;
+		    }
+
 		}
 
-		input {
-			color: $charcoal;
-			font-size: 22px;
-			@include sans-serif-font;
-		    font-weight: 300;
-		    letter-spacing: 2px;
-			border: 0 !important;
-			padding-left: 0 !important;
-		}
+		.e2ma_signup_form_element {
+			position: relative;
+			width: 100%;
+			min-height: 1px;
+			padding-right: 15px;
+			padding-left: 15px;
+			flex: 0 0 80%;
+			max-width: 80%;
 
-		.optional {
-			position: absolute;
-			right: 0;
-			bottom: 17px;
-			color: #CCCCCC;
-			@include serif-font;
-			font-size: 16px;
-			font-style: italic;
-		    z-index: 999;
-		    letter-spacing: 1px;
+			@media (max-width: 1024px) {
+				flex: 0 0 100%;
+    			max-width: 100%;
+			}
+
+			input {
+				font-family: sans-serif;
+				font-size: 100%;
+				line-height: 1.15;
+				margin: 0;
+				overflow: visible;
+				-ms-touch-action: manipulation;
+      			touch-action: manipulation;
+      			line-height: inherit;
+
+				display: block;
+				width: 100%;
+				padding: 0.5rem 0.75rem;
+				font-size: 1rem;
+				line-height: 1.25;
+				color: #464a4c;
+				background-color: #fff;
+				background-image: none;
+				-webkit-background-clip: padding-box;
+				background-clip: padding-box;
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				border-radius: 0.25rem;
+				-webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+				transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+				-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+				transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+				transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+
+				color: $charcoal !important;
+				font-size: 22px !important;
+				@include sans-serif-font;
+			    font-weight: 300 !important;
+			    letter-spacing: 2px !important;
+				border: 0 !important;
+				padding-left: 0 !important;
+
+				&::-ms-expand {
+				  background-color: transparent;
+				  border: 0;
+				}
+
+				&:focus {
+				  color: #464a4c;
+				  background-color: #fff;
+				  border-color: #5cb3fd;
+				  outline: none;
+				}
+
+				&::-webkit-input-placeholder {
+				  color: #636c72;
+				  opacity: 1;
+				}
+
+				&::-moz-placeholder {
+				  color: #636c72;
+				  opacity: 1;
+				}
+
+				&:-ms-input-placeholder {
+				  color: #636c72;
+				  opacity: 1;
+				}
+
+				&::placeholder {
+				  color: #636c72;
+				  opacity: 1;
+				}
+			}
+
+			.optional {
+				position: absolute;
+				right: 0;
+				bottom: 17px;
+				color: #CCCCCC;
+				@include serif-font;
+				font-size: 16px;
+				font-style: italic;
+			    z-index: 999;
+			    letter-spacing: 1px;
+			}	
 		}
 	}
 
-	button.submit {
-		font-size: 14px;
-	    letter-spacing: 4px;
-	    font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
-	    font-weight: 300;
-	    text-transform: uppercase;
-	    color: $mustard;
-	    margin: 0 auto;
-	    display: table;
-	    background:none;
-		border:none;
+	.e2ma_signup_form_button_row {
+		margin-top: 40px;
+
+		#e2ma_signup_submit_button {
+			font-family: sans-serif;
+			font-size: 100%;
+			line-height: 1.15;
+			margin: 0;
+			overflow: visible;
+			text-transform: none;
+			-webkit-appearance: button;
+			-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				line-height: inherit;
+			
+			font-size: 14px !important;
+			letter-spacing: 4px !important;
+			font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important !important;
+			font-weight: 300 !important;
+			text-transform: uppercase !important;
+			color: $mustard !important;
+			margin: 0 auto !important;
+			display: table !important;
+			background:none !important;
+			border:none !important;
+
+			&:focus {
+				outline: 1px dotted;
+				outline: 5px auto -webkit-focus-ring-color;
+			}
+
+			&::-moz-focus-inner,
+			[type="button"]::-moz-focus-inner,
+			[type="reset"]::-moz-focus-inner,
+			[type="submit"]::-moz-focus-inner {
+			border-style: none;
+				padding: 0;
+			}
+
+			&:-moz-focusring,
+			[type="button"]:-moz-focusring,
+			[type="reset"]:-moz-focusring,
+			[type="submit"]:-moz-focusring {
+				outline: 1px dotted ButtonText;
+			}
+		}
+
+		#e2ma_signup_reset_button {
+			display: none;
+		}
+
+		&:after {
+			content: '';
+			height: 13px;
+		    width: 59px;
+		   	position: absolute;
+		    transform: translate(-50%, -50%);
+		    left: 50%;
+		    margin-top: 20px;
+		    background-position: 100%;
+		    background-image: url('../../assets/images/icons/Arrow.png');
+		}
+	}
+
+	.e2ma_signup_form_required_footnote {
+		display: none;
 	}
 }

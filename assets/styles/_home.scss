@@ -1,13 +1,27 @@
 
 
 .home-slider {
+	background: #E0EAEA;
+
 	.content {
 		max-height: 600px;
 	    width: 100%;
 	    display: inline-flex;
 	    position: relative;
 	    justify-content: center;
-	    transition: all 0.2s linear;
+		visibility:hidden;
+		opacity:0;	 
+		transition: all 0.3s linear;
+
+		&.slick-initialized {
+	    	visibility:visible;
+			opacity:1;
+
+			&+.loader {
+				display: none;
+				animation-iteration-count: 1;
+			}
+	    }
 
 		img {
 			width: 100%;

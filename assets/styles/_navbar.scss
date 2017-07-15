@@ -12,8 +12,9 @@ A small CSS modification is required. Add this to your theme CSS.
 
 // Styling for the navbar
 #mainNav {
-    position: absolute;
+    position: fixed;
     @include sans-serif-font;
+    z-index: 99997;
 
     > .container {
         width: 100% !important;        
@@ -24,13 +25,14 @@ A small CSS modification is required. Add this to your theme CSS.
         width: 100%;
         top: 10px;
         position: relative;
+        transition: background-image linear 0.4s;
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url('../../assets/images/logo/G7Logo_allwhite.png');
 
         @media (max-width: 991px) {
             height: 30px;
-            width: 100%;
+            width: 50%;
             top: 5px;
             background-size: contain;
             background-repeat: no-repeat;
@@ -48,6 +50,7 @@ A small CSS modification is required. Add this to your theme CSS.
     .navbar-nav {
         > li.nav-item {
             > a {
+                transition: color linear 0.2s;
                 font-size: 14px;
                 font-weight: 400;
                 letter-spacing: 2px;
@@ -204,6 +207,7 @@ A small CSS modification is required. Add this to your theme CSS.
         .taptap-main-menu-button:before,
         .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
         .taptap-main-menu-button:after {
+            transition: background-color linear 0.4s;
             height: 1px !important;
             margin: 8px 0 !important;
         }
@@ -219,7 +223,9 @@ A small CSS modification is required. Add this to your theme CSS.
     }
 }
 
-body.case-study-template-default {
+body.case-study-template-default,
+body.error404,
+body.dark-logo {
     
     #mainNav {
         
@@ -254,6 +260,14 @@ body.modal-open {
 
     .taptap-menu-button-wrapper {
         z-index: 99999 !important;
+    }
+}
+
+body.dark-logo {
+    #mainNav {
+        .navbar-brand {
+            opacity: .8;
+        }
     }
 }
 

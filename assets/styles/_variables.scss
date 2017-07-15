@@ -1,16 +1,6 @@
 // Variables
 
 // Gray and Brand Colors for use across theme
-
-$theme-primary:    #0085A1;
-
-$gray-base:        #000 !default;
-$gray-darker:	   lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:		   lighten($gray-base, 20%) !default;   // #333
-$gray:			   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:	   lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:	   lighten($gray-base, 93.5%) !default; // #eee
-
 $frost: #98AFC2;
 $charcoal: #4C4F54;
 $mustard: #D39F0B;
@@ -20,3 +10,12 @@ $cloudy: #A3A3A3;
 $silver: #D8D8D8;
 $steel: #292929;
 $dandylion: #F8E124;
+
+$gray-base:        #000 !default;
+$gray-darker:	   lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:		   lighten($gray-base, 20%) !default;   // #333
+$gray:			   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:	   lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:	   lighten($gray-base, 93.5%) !default; // #eee
+
+$theme-primary:    $dark-navy;

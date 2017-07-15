@@ -37,7 +37,7 @@ get_header(); ?>
 		
 		endwhile;
 		
-		echo '</div>';
+		echo '</div><div class="loader"></div>';
 
 		endif;
 		

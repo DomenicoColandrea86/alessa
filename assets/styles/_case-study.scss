@@ -65,6 +65,17 @@ body.case-study-template-default {
 			    background-size: cover;
 			    background-position: top right;
 			}
+
+			img {
+				object-fit: cover;
+			    transform: transform(-50% -50%);
+			    object-position: right;
+			    height: 700px;
+
+			    @media (max-width: 768px) {
+					height: 450px;
+				}
+			}
 		}
 	}
 

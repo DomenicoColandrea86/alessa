@@ -61,9 +61,24 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- break -->
-<img class="showcase mt-5 mb-5" src="<?php the_field('showcase'); ?>" alt="">
+<!-- Showcase -->
+<div class="media-container">
+	<?php 
 
+	if (the_field('showcase_media')) : ?>
+
+	    <div class="showcase-media embed-container mt-5 mb-5">
+			<?php the_field('showcase_media'); ?>
+		</div>
+
+	<?php
+
+	elseif (the_field('showcase')): ?>
+	    <img class="showcase mt-5 mb-5" src="<?php the_field('showcase'); ?>" alt="">
+
+	<?php endif; ?>
+</div>
+<img class="showcase mt-5 mb-5" src="<?php the_field('showcase'); ?>" alt="">
 <!-- Content -->
 <section class="container-fluid content">
     <div class="row">

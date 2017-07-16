@@ -76,6 +76,8 @@
 	    </div>
 	</footer>
 </div>
+<div class="pre-load"></div>
+<div class="pre-load mobile"></div>
 
 <?php 
 

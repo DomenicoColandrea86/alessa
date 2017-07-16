@@ -113,3 +113,12 @@
     transform: rotate(360deg);
   }
 }
+
+.pre-load {
+  display: none;
+  background-image: url('../../assets/images/logo/G7Logo_alldark.png') !important;
+
+  &.mobile {
+    background-image: url('../../assets/images/logo/G7Logo_white_gold_circle_dark.png') !important;
+  }
+}

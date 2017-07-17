@@ -154,6 +154,7 @@ require_once('functions/post-types/testimonials.php');
 require_once('functions/post-types/what-we-do.php');
 require_once('functions/post-types/say-hello.php');
 require_once('functions/post-types/social-media.php');
+require_once('functions/post-types/footer.php');
 
 /**
  * Register Custom Widgets

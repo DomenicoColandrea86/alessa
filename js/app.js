@@ -17,7 +17,7 @@ $(document).ready(function () {
       userId: 916800866,
       accessToken: '916800866.5b88765.c9cb1c7df2a744d29376ad3ac3debce5',
       resolution: 'standard_resolution',
-      template: '<div class="col-ig"><a class="d-block image" href="{{link}}"><img class="img-fluid" src="{{image}}"/></a></div>',
+      template: '<div class="col-ig"><a class="d-block image" href="{{link}}" target="_blank"><img class="img-fluid" src="{{image}}"/></a></div>',
     });
 
     feed.run();
@@ -33,6 +33,7 @@ $(document).ready(function () {
       autoplay: true,
       mobileFirst: true,
       arrows: false,
+      pause: false,
     });
   }
 
@@ -47,6 +48,7 @@ $(document).ready(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       mobileFirst: true,
+      pause: false,
       arrows: true,
       responsive: [
         {

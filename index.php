@@ -179,8 +179,8 @@ get_header(); ?>
 		    </div>
 		    
         	<!-- Testimonials Carousel -->
-			<div id="testimonialsCarousel" class="testimonials carousel slide" data-ride="carousel">
-				<div class="col-10 offset-1">
+			<div id="testimonialsCarousel" class="testimonials carousel slide carousel-fade" data-ride="carousel">
+				<div class="col-8 offset-2">
 					<div class="carousel-inner" role="listbox">
 						<?php
 

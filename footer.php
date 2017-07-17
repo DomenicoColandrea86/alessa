@@ -27,12 +27,32 @@
     					</div>
 		            	<div class="col-md-4">
 		            		<h5>Contact us</h5>
+		            		<br>
+		            		<?php
+
+							$args = array(
+								'post_type' 	 => 'footer',
+								'posts_per_page' => -1,
+							);
+
+							$the_query = new WP_Query( $args );
+
+							if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+
+							?>
+							<p><?php the_field('phone'); ?></p>
+				    		<p><?php the_field('email'); ?></p>
 				    		<br>
-				    		<p>(615) 988-3422</p>
-				    		<p>info@g7marketing.com</p>
-				    		<br>
-				    		<p>801 18th Ave S</p>
-				    		<p class="mb-0"> Nashville, TN 37203</p>
+				    		<p><?php the_field('address'); ?></p>
+				    		<p class="mb-0"><?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zipcode'); ?></p>
+
+				    		<?php
+
+							endwhile;
+
+							endif;
+
+							wp_reset_query(); ?>
 		            	</div>
 			    		<div class="col-md-4 d-flex">
 			    			<div class="row mx-auto">
@@ -47,29 +67,94 @@
 			    				</div>
 			    				<div class="col-12 p-0 align-self-end">
 				    				<div class="d-flex justify-content-between">
-						        		<a href="http://facebook.com">
+				    					<?php
+
+										$args = array(
+											'post_type' 	 => 'social-media',
+											'posts_per_page' => -1,
+										);
+
+										$the_query = new WP_Query( $args );
+
+										if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
+										
+										if ( get_field( 'facebook' ) ): ?>
+
+										<a href="<?php the_field('facebook'); ?>">
 					    					<i class="white fa fa-2x fa-facebook" aria-hidden="true"></i>
 					    				</a>
-					    				<a href="http://instagram.com">
+
+										<?php 
+
+										endif;
+
+										if ( get_field( 'instagram' ) ): ?>
+
+										<a href="<?php the_field('instagram'); ?>">
 					    					<i class="white fa fa-2x fa-instagram" aria-hidden="true"></i>
 					    				</a>
-					    				<a href="http://youtube.com">
+
+					    				<?php 
+
+										endif;
+
+										if ( get_field( 'youtube' ) ): ?>
+
+										<a href="<?php the_field('youtube'); ?>">
 					    					<i class="white fa fa-2x fa-youtube-play" aria-hidden="true"></i>
 					    				</a>
-					    				<a href="http://twitter.com">
+
+										<?php 
+
+										endif;
+
+										if ( get_field( 'twitter' ) ): ?>
+
+										<a href="<?php the_field('twitter'); ?>">
 					    					<i class="white fa fa-2x fa-twitter" aria-hidden="true"></i>
 					    				</a>
+
+										<?php 
+
+										endif;
+
+										endwhile;
+
+										endif;
+
+										wp_reset_query(); ?>
 						        	</div>
 			    				</div>
 			    			</div>
 				    	</div>
-				    	<div class="col-lg-2 offset-lg-2 col-md-3 offset-md-1">
-					        <div class="branding"></div>
+				    	<?php
+
+						$args = array(
+							'post_type' 	 => 'footer',
+							'posts_per_page' => -1,
+						);
+
+						$the_query = new WP_Query( $args );
+
+						if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+
+						?>
+						
+						<div class="col-lg-2 offset-lg-2 col-md-3 offset-md-1">
+					        <img class="branding" src="<?php the_field('logo'); ?>" alt="">
 				    	</div>
 				    	<div class="col-12 copyright">
-			        		<p class="m-0 text-center">G7 Marketing is part of the Independent Network of Project Worldwide agencies.</p>
+			        		<p class="m-0 text-center"><?php the_field('copyright'); ?></p>
 				        	<p class="m-0 text-center">Copyright &copy; <?php echo date("Y");?> <?php echo get_bloginfo('name')?>. All Rights Reserved.</p>
 			        	</div>
+
+			        	<?php
+						
+						endwhile;
+
+						endif;
+
+						wp_reset_query(); ?>
 				    </div>
 	            </div>
 	        </div>

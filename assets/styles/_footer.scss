@@ -32,11 +32,8 @@ footer,
 
     .branding {
         width: 96px;
-        height: 61px;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center center;
-        background-image: url('../../assets/images/logo/G7Logo_white_gold_circle.png');
+        max-width: 100%;
+        height: auto;
     }
 
     .copyright {

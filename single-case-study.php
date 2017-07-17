@@ -7,100 +7,43 @@
 
 get_header(); ?>
 
-<!-- Introduction -->
-<section class="container-fluid intro pb-0">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-        	<h2 class="mx-auto text-center dark-navy"><?php the_field('headline'); ?></h2>
-        </div>
-    </div>
-</section>
+<?php
+if (have_posts()) : while (have_posts()) : the_post();
+	if( have_rows('case_study_content') ): 
+		while ( have_rows('case_study_content') ) : the_row();
 
-<!-- Hero -->
-<section class="container-fluid our-work-hero stripe pt-3">
-    <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-        	<div class="content mt-4">
-        		<img src="<?php the_field('hero_image'); ?>" />
-        	</div>
-        </div>
-    </div>
-</section>
+		// Headline
+		if( get_row_layout() == 'headline' )
+			get_template_part('partials/case-study', 'headline');
 
-<!-- Stats -->
-<section class="container-fluid stats">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-			<div class="justify-content-between">
-				<div class="stat-item">
-					<div class="text-center mustard">102,000</div>
-					<p class="text-center dark-navy">impressions</p>
-				</div>
-				<div class="seperator"></div>
-				<div class="stat-item">
-					<div class="text-center mustard">88,000</div>
-					<p class="text-center dark-navy">reach</p>
-				</div>
-				<div class="seperator"></div>
-				<div class="stat-item">
-					<div class="text-center mustard">14,000</div>
-					<p class="text-center dark-navy">engagement</p>
-				</div>
-			</div>
-		</div>
-    </div>
-</section>
+		// Hero
+		if( get_row_layout() == 'hero_image' )
+			get_template_part('partials/case-study', 'hero');
 
-<!-- Content -->
-<section class="container-fluid content">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
-            <p class="dark-navy"><?php the_field('lead'); ?></p>
-            <p class="charcoal sub-text mt-4"><?php the_field('body'); ?></p>
-        </div>
-    </div>
-</section>
+		// Stats
+		if( get_row_layout() == 'stats' )
+			get_template_part('partials/case-study', 'stats');
 
-<!-- Showcase -->
-<div class="media-container">
-	<?php 
+		// Lead
+		if( get_row_layout() == 'lead' )
+			get_template_part('partials/case-study', 'lead');
 
-	if (the_field('showcase_media')) : ?>
+		// Body
+		if( get_row_layout() == 'body' )
+			get_template_part('partials/case-study', 'body');
 
-	    <div class="showcase-media embed-container mt-5 mb-5">
-			<?php the_field('showcase_media'); ?>
-		</div>
+		// Showcase Image
+		if( get_row_layout() == 'showcase_image' )
+			get_template_part('partials/case-study', 'showcase-image');
 
-	<?php
+		// Showcase Media
+		if( get_row_layout() == 'showcase_media' )
+			get_template_part('partials/case-study', 'showcase-media');
 
-	elseif (the_field('showcase')): ?>
-	    <img class="showcase mt-5 mb-5" src="<?php the_field('showcase'); ?>" alt="">
+		endwhile;
+	endif;
 
-	<?php endif; ?>
-</div>
-<img class="showcase mt-5 mb-5" src="<?php the_field('showcase'); ?>" alt="">
-<!-- Content -->
-<section class="container-fluid content">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
-            <p class="dark-navy mt-4"><?php the_field('lead_2'); ?></p>
-            <p class="charcoal sub-text mt-4"><?php the_field('body_2'); ?></p>
-        </div>
-    </div>
-</section>
-
-<!-- break -->
-<img class="showcase mt-5 mb-5" src="<?php the_field('showcase_2'); ?>" alt="">
-
-<!-- Content -->
-<section class="container-fluid content">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
-            <p class="dark-navy"><?php the_field('lead_3'); ?></p>
-            <p class="charcoal sub-text mt-4"><?php the_field('body_3'); ?></p>
-        </div>
-    </div>
-</section>
+endwhile; endif; ?>
 
 <!-- More Projects -->
 <section class="container-fluid more-projects pb-0">

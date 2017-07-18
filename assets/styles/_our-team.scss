@@ -37,8 +37,8 @@
 
 .our-team {
 	h2 {
-		font-size: 40px;
-    	letter-spacing: 1px;
+		font-size: 32px;
+    	letter-spacing: 0.6px;
     	@include header-font;
 
     	@media (max-width: 768px) {

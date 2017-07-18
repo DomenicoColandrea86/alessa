@@ -75,6 +75,10 @@
     font-family: 'Avenir-Heavy', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
+@mixin helvetica() {
+    font-family: Helvetica, Arial, sans-serif !important;
+}
+
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {

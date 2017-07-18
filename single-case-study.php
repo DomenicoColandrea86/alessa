@@ -67,8 +67,9 @@ endwhile; endif; ?>
             <a href="<?php the_permalink(); ?>" class="card card-inverse">
 			  <img class="card-img img-fluid" src="<?php the_field('thumbnail'); ?>" alt="">
 			  <div class="card-img-overlay">
-			    <h4 class="card-title text-uppercase mt-2 mr-5"><?php the_field('case_highlight'); ?></h4>
-			    <div class="mt-5 icon-arrow-white"></div>
+			    <h4 class="card-title mt-2 mr-5"><?php the_field('case_highlight'); ?></h4>
+			    <p class="mr-5"><?php the_title(); ?></p>
+			    <div class="icon-arrow-white"></div>
 			  </div>
 			</a>
         </div>

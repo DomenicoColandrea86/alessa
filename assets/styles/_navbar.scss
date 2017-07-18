@@ -12,18 +12,22 @@ A small CSS modification is required. Add this to your theme CSS.
 
 // Styling for the navbar
 #mainNav {
+    padding: 40px 80px;
     position: fixed;
     @include sans-serif-font;
     z-index: 99997;
+
+    @media (max-width: 991px) {
+        padding: 10px 20px;
+    }
 
     > .container {
         width: 100% !important;        
     }
 
     .navbar-brand {
-        height: 56px;
+        height: 40px;
         width: 100%;
-        top: 10px;
         position: relative;
         transition: background-image linear 0.4s;
         background-size: contain;
@@ -51,11 +55,12 @@ A small CSS modification is required. Add this to your theme CSS.
         > li.nav-item {
             > a {
                 transition: color linear 0.2s;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: 2px;
                 text-transform: uppercase;
-                @include sans-serif-font;
+                font-size: 11px;
+                letter-spacing: 3px;
+                font-weight: 600;
+                @include helvetica;
+                padding-top: 40px;
             }
         }
     }

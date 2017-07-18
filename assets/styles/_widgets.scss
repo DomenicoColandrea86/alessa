@@ -1,6 +1,13 @@
 
 .widget_g7_mobile_navigation {
-     h4,h5,h6 {
+    h5 {
+        color: #98AFC2;
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-weight: 600;
+        @include helvetica;
+    }
+    h4, h6 {
         color: #98AFC2;
         font-weight: 400;
         @include sans-serif-font;

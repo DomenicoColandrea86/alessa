@@ -21,6 +21,7 @@ get_header(); ?>
 		 
 		$image = get_sub_field('image');
 		$text = get_sub_field('text');
+		$title = get_sub_field('title');
 		$link = get_sub_field('case_study_link');
 
 		?>
@@ -29,7 +30,11 @@ get_header(); ?>
 			<img src="<?php echo $image['url']; ?>"/>
 			<div>
 				<h1><?php echo $text ?></h1>
-				<a href="<?php echo $link ?>" class="case-study text-uppercase">View case study</a>
+				<a href="<?php echo $link ?>" class="case-study text-right">
+					<?php echo $title ?>
+					<br>
+					<div class="pull-right mt-3 mr-2 icon-arrow-white"></div>
+				</a>
 			</div>
 		</div>
 
@@ -49,7 +54,7 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-            <h1 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h1>
+            <h2 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h2>
             <p class="text-center charcoal"><?php the_field('body'); ?></p>
             <div class="mt-5 mx-auto icon-arrow-down"></div>
         </div>
@@ -123,8 +128,9 @@ get_header(); ?>
 	        <a href="<?php the_permalink(); ?>" class="card card-inverse">
 			  <img class="card-img img-fluid" src="<?php the_field('thumbnail'); ?>" alt="">
 			  <div class="card-img-overlay">
-			    <h4 class="card-title text-uppercase mt-2 mr-5"><?php the_field('case_highlight'); ?></h4>
-			    <div class="mt-5 icon-arrow-white"></div>
+			    <h4 class="card-title mt-2 mr-5"><?php the_field('case_highlight'); ?></h4>
+			    <p class="mr-5"><?php the_title(); ?></p>
+			    <div class="icon-arrow-white"></div>
 			  </div>
 			</a>
 	    </div>

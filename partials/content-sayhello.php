@@ -11,6 +11,7 @@
 
 <!-- Say Hello -->
 <section id="sayHello" class="container-fluid say-hello">
+	<div data-0="transform:translateY(75vh);" data-5000="transform:translateY(-10vh);">
 	<div class="row">
 		<div class="col-lg-10 offset-lg-1">
 			<div class="row vertical-align">

@@ -21,7 +21,7 @@
 		            <div class="row">
 		            	<div class="mobile mb-5">
 		            		<div class="col-12">
-			            		<p class="section-text mb-4">Sign up to our Newsletter</p>
+			            		<p class="section-text mb-4">Sign up to our newsletter</p>
 		        				<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="d-block icon-arrow"></a>		
 		            		</div>
     					</div>
@@ -168,8 +168,10 @@
 
 wp_footer(); 
 
+// Load Recent Projects Modal
+get_template_part('partials/content', 'recent-projects');
 // Load Contact Form Modal
-get_template_part( 'partials/content', 'contact' );
+get_template_part('partials/content', 'contact');
 
 ?>
 

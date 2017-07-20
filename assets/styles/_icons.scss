@@ -4,6 +4,7 @@
     width: 59px;
     background-position: 100%;
     background-image: url('../../assets/images/icons/Arrow.png');
+    background-repeat: no-repeat;
 
     &.grey-scale {
 		background-image: url('../../assets/images/icons/Arrow_grey.png');    	
@@ -15,7 +16,17 @@
     width: 13px;
     background-position: 100%;
     background-size: 100%;
+    background-repeat: no-repeat;
     background-image: url('../../assets/images/icons/Arrow-down.png');
+}
+
+.icon-arrow-left {
+    height: 13px;
+    width: 59px;
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/icons/Arrow-left.png');
 }
 
 .icon-arrow-white {

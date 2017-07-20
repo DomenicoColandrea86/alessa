@@ -27,7 +27,7 @@ A small CSS modification is required. Add this to your theme CSS.
 
     .navbar-brand {
         height: 40px;
-        width: 100%;
+        width: 50%;
         position: relative;
         transition: background-image linear 0.4s;
         background-size: contain;
@@ -136,6 +136,16 @@ A small CSS modification is required. Add this to your theme CSS.
             transform: translate3d(0, 100%, 0);
         }
     }
+
+    &.recent-projects-modal-active {
+        z-index: 999999;
+
+        @media (max-width: 991px) {
+            .navbar-brand {
+                display: none !important;
+            }
+        }
+    }
 }
 
 
@@ -177,7 +187,6 @@ A small CSS modification is required. Add this to your theme CSS.
 .taptap-menu-active {
     .taptap-main-menu-button {
         position: fixed;
-        padding: 10px 5px !important;
     }
 }
 
@@ -207,7 +216,6 @@ A small CSS modification is required. Add this to your theme CSS.
 }
 
 .taptap-menu-button-wrapper {
-
     &.taptap-menu-active {
         .taptap-main-menu-button:before,
         .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
@@ -224,6 +232,13 @@ A small CSS modification is required. Add this to your theme CSS.
         .taptap-main-menu-button:after {
             height: 2px !important;
             margin: 5px 0 !important;
+        }
+    }
+
+    &.recent-projects-modal-active {
+        @media (max-width: 991px) {
+            z-index: 0 !important;
+            display: none !important;
         }
     }
 }
@@ -262,10 +277,6 @@ body.modal-open {
     .taptap-menu-active .taptap-main-menu-button {
         z-index: 9999999 !important;
     }
-
-    .taptap-menu-button-wrapper {
-        z-index: 99999 !important;
-    }
 }
 
 body.dark-logo {
@@ -274,5 +285,9 @@ body.dark-logo {
             opacity: .8;
         }
     }
+}
+
+div.taptap-background-color {
+    height: 300px !important;
 }
 

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Instafeed from 'instafeed.js';
 import slick from 'slick-carousel';
+import skrollr from 'skrollr';
 
 // import styles
 require('../assets/styles/styles.scss');
@@ -8,6 +9,10 @@ require('slick-carousel/slick/slick.scss');
 require('slick-carousel/slick/slick-theme.scss');
 
 $(document).ready(function () {
+
+  skrollr.init({
+    forceHeight: false
+  });
 
   // Setup `InstaFeed` gallery
   if ($('#instafeed').length > 0) {
@@ -76,12 +81,44 @@ $(document).ready(function () {
   }
 
   // Smooth scrolling nav links
-  $('#mainNav').find('li:not(#menu-item-58)').find('a').click(function (e) {
+  $('li#menu-item-78').find('a').click(function (e) {
     e.preventDefault();
     const section = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(section).offset().top,
     });
+  });
+
+  // Setup modal trigger nav links
+  $('#menu-item-79').find('a').attr('data-toggle', 'modal');
+  $('#menu-item-79').find('a').attr('data-target', '.recent-projects-modal');
+  $('#menu-main-navigation-1').find('#menu-item-79').find('a').attr('data-toggle', 'modal');
+  $('#menu-main-navigation-1').find('#menu-item-79').find('a').attr('data-target', '.recent-projects-modal');
+
+    // Recent Projects Nav menu slider
+  $('#recentProjectsSlider').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    dots: false,
+    speed: 300,
+    cssEase: 'linear',
+    pause: false,
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }],
+  });
+
+  $('#recentProjectsSlider').on('init reInit destroy afterChange', function (event, slick, currentSlide, nextSlide) {
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $('.paging-info').text(i + '/' + $(slick.$slider[0].children[0].children[0]).find('.slick-slide:not(.slick-cloned)').length);
+      // slick-cloned
   });
 
   // Remove double scroll bars when mobile nav is open
@@ -90,6 +127,40 @@ $(document).ready(function () {
   });
   $('.contact-us-modal').on('hide.bs.modal', function (e) {
     $('html').css({overflowY: 'auto'});
+  });
+
+  // Init slider inside bs modal
+  $('.recent-projects-modal').on('shown.bs.modal', function (e) {    
+    $('html').resize();
+    $('#mainNav').toggleClass('recent-projects-modal-active');
+    $('.taptap-menu-button-wrapper').toggleClass('recent-projects-modal-active');
+
+    $('.left-arrow').click(function(event){
+      $('#recentProjectsSlider').slick('slickPrev');
+    });
+
+    $('.right-arrow').click(function(event){
+      $('#recentProjectsSlider').slick('slickNext');
+    });
+
+    $('.paging-info').text($('#recentProjectsSlider').slick().currentSlide() + '/' + $('.case-study-item.slick-slide').size());
+
+    $(window).on('resize', function() {
+      if ($(this).width() < 768) {
+        $('html').css({overflowY: 'hidden'});
+      }
+    });
+  });
+
+  $('.recent-projects-modal').on('hide.bs.modal', function (e) {
+    $('html').css({overflowY: 'auto'});
+    $('.taptap-menu-button-wrapper').removeClass('recent-projects-modal-active');
+    $('#mainNav').removeClass('recent-projects-modal-active');
+  });
+
+  $('.icon-arrow-left').click(function(e) {
+      $('#menu-item-79').find('a').trigger('click');
+      $('.taptap-main-menu-button').trigger('click');
   });
 
   // Setup Newsletter Form

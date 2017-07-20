@@ -54,9 +54,11 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-            <h2 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h2>
-            <p class="text-center charcoal"><?php the_field('body'); ?></p>
-            <div class="mt-5 mx-auto icon-arrow-down"></div>
+        	<div data-0="transform:translateY(10vh);" data-5000="transform:translateY(-130vh);">
+        		<h2 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h2>
+	            <p class="text-center charcoal"><?php the_field('body'); ?></p>
+	            <div class="mt-5 mx-auto icon-arrow-down"></div>
+        	</div>
         </div>
     </div>
 </section>
@@ -65,41 +67,43 @@ get_header(); ?>
 <section class="container-fluid what-we-do stripe">
     <div class="row">
         <div class="col-lg-10 offset-lg-1">
-        	<div class="row">
-	    		<div class="col-lg-12">
-		    		<h2 class="mb-5 text-center mustard">What we do</h2>
-		    	</div>
+        	<div data-0="transform:translateY(20vh);" data-5000="transform:translateY(-100vh);">
+        		<div class="row">
+		    		<div class="col-lg-12">
+			    		<h2 class="mb-5 text-center mustard">What we do</h2>
+			    	</div>
 
-		    	<?php
+			    	<?php
 
-				$args = array(
-					'post_type' 	 => 'what-we-do',
-					'order' 		 => 'ASC',
-					'posts_per_page' => -1,
-				);
+					$args = array(
+						'post_type' 	 => 'what-we-do',
+						'order' 		 => 'ASC',
+						'posts_per_page' => -1,
+					);
 
-				$the_query = new WP_Query( $args );
+					$the_query = new WP_Query( $args );
 
-				if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
+					if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
 
-				?>
-				<div class="col-lg-6 mb-4">
-					<div class="col-lg-8 offset-lg-2">
-						<h4 class="mb-4 dark-navy"><?php the_field('title'); ?></h4>
-    					<p class="dark-navy"><?php the_field('description'); ?></p>
+					?>
+					<div class="col-lg-6 mb-4">
+						<div class="col-lg-8 offset-lg-2">
+							<h4 class="mb-4 dark-navy"><?php the_field('title'); ?></h4>
+	    					<p class="dark-navy"><?php the_field('description'); ?></p>
+						</div>
 					</div>
+					<?php 
+
+					endwhile;
+
+					endif;
+
+					wp_reset_query(); ?>
 				</div>
-				<?php 
-
-				endwhile;
-
-				endif;
-
-				wp_reset_query(); ?>
-			</div>
-    		<div class="mx-auto mt-5 mb-1 d-table section-text">
-    			<p class="sea-blue">Full list of capabilities</p>
-        		<a href="<?php the_field('download_pdf'); ?>" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight" download>Download PDF</a>
+	    		<div class="mx-auto mt-5 mb-1 d-table section-text">
+	    			<p class="sea-blue">Full list of capabilities</p>
+	        		<a href="<?php the_field('download_pdf'); ?>" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight" download>Download PDF</a>
+	        	</div>	
         	</div>
         </div>
     </div>
@@ -113,7 +117,6 @@ get_header(); ?>
 		$args = array(
 			'post_type' 	=> 'case-study',
 			'post__not_in'=> array(get_the_ID()),
-			'orderby' => 'date',
 			'order' => 'DESC',
 			'posts_per_page' => 6,
 		);
@@ -148,7 +151,8 @@ get_header(); ?>
 
 <!-- Selected Clients -->
 <section class="container-fluid selected-clients stripe">
-    <div class="row">
+	<div data-0="transform:translateY(85vh);" data-5000="transform:translateY(-45vh);">
+    	    <div class="row">
         <div class="col-lg-10 offset-lg-1">
         	<div class="row vertical-align">
         		<div class="col-lg-12">
@@ -226,16 +230,17 @@ get_header(); ?>
 					</div>	
 				</div>
 				<a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
-					<i class="fa fa-3x fa-angle-left mustard" aria-hidden="true"></i>
+					<i class="btl bt-2x bt-angle-left mustard" aria-hidden="true"></i>
 					<span class="sr-only">Previous</span>
 				</a>
 				<a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
-					<i class="fa fa-3x fa-angle-right mustard" aria-hidden="true"></i>
+					<i class="btl bt-2x bt-angle-right mustard" aria-hidden="true"></i>
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
         </div>
-    </div>
+    </div>	
+	</div>
 </section>
 
 <!-- break -->
@@ -243,6 +248,7 @@ get_header(); ?>
 
 <!-- Say Hello -->
 <?php get_template_part( 'partials/content', 'sayhello' ); ?>
+
 
 <!-- Instagram Feed -->
 <section class="container-fluid follow-us stripe">
@@ -255,13 +261,15 @@ get_header(); ?>
 
 <!-- Stay in Touch -->
 <section class="container-fluid stay-in-touch">
-    <div class="row">
+	<div data-0="transform:translateY(110vh);" data-5000="transform:translateY(-5vh);">
+	<div class="row">
         <div class="mx-auto text-center pr-5 pl-5 x-auto mt-5 mb-5 d-table section-text">
 			<h2 class="mx-auto text-center mustard">Stay in Touch</h2>
 			<p class="sea-blue">Sign up to our monthly Newsletter</p>
 			<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Sign up</a>
 		</div>
     </div>
+	</div>
 </section>
 
 <?php

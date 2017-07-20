@@ -22,7 +22,7 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-            <h1 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h1>
+            <h2 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h2>
             <p class="text-center charcoal"><?php the_field('body'); ?></p>
             <div class="mt-5 mx-auto icon-arrow-down"></div>
         </div>

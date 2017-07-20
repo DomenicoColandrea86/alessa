@@ -53,7 +53,7 @@
 
 		.case-study {
 		    display: inline-block;
-		    right: 20px;
+		    right: 85px;
 		    bottom: 20px;
 		    text-align: center;
 		    color: #fff;
@@ -198,7 +198,7 @@
 
 			p {
 				color: #fff;
-				font-size: 27px;
+				font-size: 24px;
 				letter-spacing: 2px;
 				font-family: Avenir-Light,Helvetica Neue,Helvetica,Arial,sans-serif!important;
 			    margin-bottom: 50px;
@@ -236,8 +236,18 @@
 }
 
 .testimonials {
+	.carousel-inner {
+		max-width: 500px;
+	    display: table;
+	    margin: 0 auto;
+	}
+
+	.carousel-control-next, .carousel-control-prev {
+		width: 26%;
+	}
+
 	blockquote {
-		font-family: Georgia, Times, "Times New Roman", serif;
+		@include eames-century-book;
 		font-size: 32px;
 		font-style: italic;
 

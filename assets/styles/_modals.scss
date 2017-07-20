@@ -155,8 +155,31 @@ body {
       margin-top: 60px;
     }
 
+    .recent-projects-slider-container {
+        background: #0F181F;
+    }
+
     #recentProjectsSlider {
+      min-height: 400px;
       display: block;
+      visibility:hidden;
+      opacity:0;
+      max-height: 400px;
+
+      +.loader {
+        display: block !important;
+      }
+
+      &.slick-initialized {
+          visibility:visible;
+          opacity:1;
+          max-height: 100%;
+
+        &+.loader {
+          display: none !important;
+          animation-iteration-count: 1;
+        }
+      }
 
       @media(max-width: 575px) {
         display: none;

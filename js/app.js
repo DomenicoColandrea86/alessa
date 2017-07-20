@@ -10,9 +10,11 @@ require('slick-carousel/slick/slick-theme.scss');
 
 $(document).ready(function () {
 
-  skrollr.init({
-    forceHeight: false
-  });
+  if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    skrollr.init({
+        forceHeight: false
+    });
+}
 
   // Setup `InstaFeed` gallery
   if ($('#instafeed').length > 0) {
@@ -36,7 +38,6 @@ $(document).ready(function () {
       fade: true,
       cssEase: 'linear',
       autoplay: true,
-      mobileFirst: true,
       arrows: false,
       pause: false,
     });
@@ -52,7 +53,6 @@ $(document).ready(function () {
       cssEase: 'linear',
       slidesToShow: 1,
       slidesToScroll: 1,
-      mobileFirst: true,
       pause: false,
       arrows: true,
       responsive: [
@@ -95,32 +95,6 @@ $(document).ready(function () {
   $('#menu-main-navigation-1').find('#menu-item-79').find('a').attr('data-toggle', 'modal');
   $('#menu-main-navigation-1').find('#menu-item-79').find('a').attr('data-target', '.recent-projects-modal');
 
-    // Recent Projects Nav menu slider
-  $('#recentProjectsSlider').slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    dots: false,
-    speed: 300,
-    cssEase: 'linear',
-    pause: false,
-    arrows: false,
-    responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      }
-    }],
-  });
-
-  $('#recentProjectsSlider').on('init reInit destroy afterChange', function (event, slick, currentSlide, nextSlide) {
-      var i = (currentSlide ? currentSlide : 0) + 1;
-      $('.paging-info').text(i + '/' + $(slick.$slider[0].children[0].children[0]).find('.slick-slide:not(.slick-cloned)').length);
-      // slick-cloned
-  });
-
   // Remove double scroll bars when mobile nav is open
   $('.contact-us-modal').on('show.bs.modal', function (e) {
     $('html').css({overflowY: 'hidden'});
@@ -130,10 +104,31 @@ $(document).ready(function () {
   });
 
   // Init slider inside bs modal
-  $('.recent-projects-modal').on('shown.bs.modal', function (e) {    
-    $('html').resize();
-    $('#mainNav').toggleClass('recent-projects-modal-active');
-    $('.taptap-menu-button-wrapper').toggleClass('recent-projects-modal-active');
+  $('.recent-projects-modal').on('show.bs.modal', function (e) {
+    // Recent Projects Nav menu slider
+    $('#recentProjectsSlider').not('.slick-initialized').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      dots: false,
+      speed: 300,
+      cssEase: 'linear',
+      pause: false,
+      arrows: false,
+      responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }],
+    });
+
+    $('#recentProjectsSlider').on('init reInit resize destroy afterChange', function (event, slick, currentSlide, nextSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $('.paging-info').text(i + '/' + $(slick.$slider[0].children[0].children[0]).find('.slick-slide:not(.slick-cloned)').length);
+    });
 
     $('.left-arrow').click(function(event){
       $('#recentProjectsSlider').slick('slickPrev');
@@ -142,6 +137,12 @@ $(document).ready(function () {
     $('.right-arrow').click(function(event){
       $('#recentProjectsSlider').slick('slickNext');
     });
+  });
+
+  $('.recent-projects-modal').on('shown.bs.modal', function (e) {
+    $(window).trigger('resize');
+    $('#mainNav').toggleClass('recent-projects-modal-active');
+    $('.taptap-menu-button-wrapper').toggleClass('recent-projects-modal-active');
 
     $('.paging-info').text($('#recentProjectsSlider').slick().currentSlide() + '/' + $('.case-study-item.slick-slide').size());
 
@@ -156,6 +157,10 @@ $(document).ready(function () {
     $('html').css({overflowY: 'auto'});
     $('.taptap-menu-button-wrapper').removeClass('recent-projects-modal-active');
     $('#mainNav').removeClass('recent-projects-modal-active');
+  });
+
+  $('.recent-projects-modal').on('hidden.bs.modal', function (e) {
+    $('#recentProjectsSlider').slick('unslick');
   });
 
   $('.icon-arrow-left').click(function(e) {

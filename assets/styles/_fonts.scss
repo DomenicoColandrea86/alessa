@@ -1,4 +1,12 @@
 @font-face {
+	font-family: 'Eames-Century-Book';
+	src:url('../fonts/EamesCentury/EamesCenturyModern-Book.woff2') format('woff2'),
+		url('../fonts/EamesCentury/EamesCenturyModern-Book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Avenir';
 	src: url('../fonts/Avenir/AvenirLTStd-Roman.eot');
 	src: url('../fonts/Avenir/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'),

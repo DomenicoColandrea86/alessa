@@ -6,6 +6,12 @@
     @include helvetica;
 }
 
+a.section-highlight {
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
 .section-text {
     font-size: 20px;
     letter-spacing: 0.2px;

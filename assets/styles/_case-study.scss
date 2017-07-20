@@ -25,7 +25,7 @@ body.case-study-template-default {
 
 		.lead {
 			font-size: 18px;
-			line-height: 1.8;
+			line-height: 1.6;
 			@include sans-serif-font;
 			font-weight: 300;
 		    letter-spacing: .2px;
@@ -168,6 +168,11 @@ body.case-study-template-default {
 				    @media (max-width: 575px) {
 				     	opacity: 1;
 				     	padding: 2rem;
+					}
+
+					.icon-arrow-white {
+						position: absolute;
+	    				bottom: 20%;
 					}
 				}
 

@@ -1,0 +1,16 @@
+
+.animated {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  transition: opacity .6s linear, visibility .6s linear;
+}
+
+.fayde {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fayde.show {
+    opacity: 1;
+     visibility: visible;
+}

@@ -81,20 +81,29 @@
 			}
 		}
 
+		.slick-next:before,
+		.slick-prev:before {
+		    content: "";
+		}
+
 		.slick-prev,
 		.slick-next {
-		    font-size: 0;
+		    font-size: 0 !important;
 		    position: absolute;
-		    bottom: 20px;
-		    color: $mustard;
-		    border: 0;
-		    background: none;
+		    color: white;
+		    height: 25px;
 		    z-index: 1000;
-		    height: 40px;
-
-		    &:before,
-		    &:after {
-		    	content: '';
+		   	display: inline-block;
+		    font: normal normal normal 25px/1 'Black Tie';
+		    font-size: inherit;
+		    vertical-align: -14.28571429%;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    transform: translate(0);
+		    transition: margin-top 0.2s linear;
+		    &:hover {
+		    	margin-top: 5px;
 		    }
 		}
 
@@ -103,8 +112,8 @@
 		}
 
 		.slick-prev:after {
-			content: "\f104";
-		    font: 40px/1 'FontAwesome';
+			content: "\F092";
+		    font: normal normal normal 25px/1 'Black Tie';
 		}
 
 		.slick-next {
@@ -113,13 +122,13 @@
 		}
 
 		.slick-next:after {
-			content: "\f105";
-		    font: 40px/1 'FontAwesome';
+			content: "\F093";
+		    font: normal normal normal 25px/1 'Black Tie';
 		}
 
 		.slick-prev:hover:after,
 		.slick-next:hover:after {
-		    color: $mustard;
+		    color: white;
 		}
 	}
 }

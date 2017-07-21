@@ -45,6 +45,18 @@ footer,
             color: #a3a3a3;
             letter-spacing: 1px;
             @include graphik;
+
+            p {
+                text-align: center;
+            }
+
+            a {
+                color: $mustard;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 

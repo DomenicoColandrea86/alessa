@@ -54,8 +54,8 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-        	<div data-0="transform:translateY(10vh);" data-5000="transform:translateY(-130vh);">
-        		<h2 class="mt-3 mb-5 text-center dark-navy"><?php the_field('headline'); ?></h2>
+        	<div data-0="transform:translateY(17vh);" data-5000="transform:translateY(-130vh);">
+        		<h2 class="mt-3 mb-3 text-center dark-navy"><?php the_field('headline'); ?></h2>
 	            <p class="text-center charcoal"><?php the_field('body'); ?></p>
 	            <div class="mt-5 mx-auto icon-arrow-down"></div>
         	</div>
@@ -67,7 +67,7 @@ get_header(); ?>
 <section class="container-fluid what-we-do stripe">
     <div class="row">
         <div class="col-lg-10 offset-lg-1">
-        	<div data-0="transform:translateY(20vh);" data-5000="transform:translateY(-100vh);">
+        	<div data-0="transform:translateY(28vh);" data-5000="transform:translateY(-100vh);">
         		<div class="row">
 		    		<div class="col-lg-12">
 			    		<h2 class="mb-5 text-center mustard">What we do</h2>
@@ -86,10 +86,10 @@ get_header(); ?>
 					if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
 
 					?>
-					<div class="col-lg-6 mb-4">
-						<div class="col-lg-8 offset-lg-2">
+					<div class="col-lg-6">
+						<div class="col-lg-8 offset-lg-2 services">
 							<h4 class="mb-4 dark-navy"><?php the_field('title'); ?></h4>
-	    					<p class="dark-navy"><?php the_field('description'); ?></p>
+	    					<p class="dark-navy mb-0"><?php the_field('description'); ?></p>
 						</div>
 					</div>
 					<?php 
@@ -100,7 +100,7 @@ get_header(); ?>
 
 					wp_reset_query(); ?>
 				</div>
-	    		<div class="mx-auto mt-5 mb-1 d-table section-text">
+	    		<div class="mx-auto mt-1 mb-3 d-table section-text">
 	    			<p class="sea-blue">Full list of capabilities</p>
 	        		<a href="<?php the_field('download_pdf'); ?>" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight" download>Download PDF</a>
 	        	</div>	
@@ -156,7 +156,7 @@ get_header(); ?>
         <div class="col-lg-10 offset-lg-1">
         	<div class="row vertical-align">
         		<div class="col-lg-12">
-		    		<h2 class="mx-auto mb-5 text-center mustard">Selected Clients</h2>
+		    		<h2 class="mx-auto text-center mustard">Selected Clients</h2>
 		    	</div>
 		    	<?php
 
@@ -189,7 +189,7 @@ get_header(); ?>
 		    </div>
 		    
         	<!-- Testimonials Carousel -->
-			<div id="testimonialsCarousel" class="testimonials carousel slide carousel-fade" data-ride="carousel" data-wrap="true">
+			<div id="testimonialsCarousel" class="mt-3 testimonials carousel slide carousel-fade" data-ride="carousel" data-wrap="true">
 				<div class="col-8 offset-2">
 					<div class="carousel-inner" role="listbox">
 						<?php
@@ -244,7 +244,7 @@ get_header(); ?>
 </section>
 
 <!-- break -->
-<img class="showcase mb-5 mt-4" src="<?php the_field('showcase'); ?>" alt="">
+<img class="showcase mb-5 mt-5" src="<?php the_field('showcase'); ?>" alt="">
 
 <!-- Say Hello -->
 <?php get_template_part( 'partials/content', 'sayhello' ); ?>
@@ -263,7 +263,7 @@ get_header(); ?>
 <section class="container-fluid stay-in-touch">
 	<div data-0="transform:translateY(110vh);" data-5000="transform:translateY(-5vh);">
 	<div class="row">
-        <div class="mx-auto text-center pr-5 pl-5 x-auto mt-5 mb-5 d-table section-text">
+        <div class="mx-auto text-center pr-5 pl-5 x-auto mt-5 d-table section-text">
 			<h2 class="mx-auto text-center mustard">Stay in Touch</h2>
 			<p class="sea-blue">Sign up to our monthly Newsletter</p>
 			<a href="#" data-toggle="modal" data-target=".contact-us-modal" class="mx-auto d-table mb-2 mustard text-center text-uppercase section-highlight">Sign up</a>

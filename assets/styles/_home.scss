@@ -108,12 +108,17 @@
 			font-size: 20px;
 		}
 	}
+
+	.icon-arrow-down {
+		margin-top: 10px;
+	}
 }
 
 .what-we-do {
 	h2 {
 		font-size: 32px;
     	letter-spacing: 0.6px;
+    	margin-bottom: 100px;
     	@include header-font;
 
     	@media (max-width: 768px) {
@@ -132,6 +137,10 @@
 		letter-spacing: 0.2px;
 	    font-weight: 300;
 		@include sans-serif-font;
+	}
+
+	.services {
+		margin-bottom: 90px;
 	}
 }
 
@@ -225,6 +234,7 @@
 		font-size: 32px;
     	letter-spacing: 0.6px;
     	@include header-font;
+    	margin-bottom: 110px;
 
     	@media (max-width: 768px) {
     		font-size: 28px;
@@ -280,11 +290,20 @@
 	}
 }
 
+.showcase {
+	transition: all .2s linear;
+    object-fit: cover;
+    max-height: 100%;
+    height: auto;
+    min-height: 500px;
+}
+
 .say-hello {
 	h2 {
 		font-size: 32px;
     	letter-spacing: 0.6px;
     	@include header-font;
+    	margin-bottom: 110px;
 
     	@media (max-width: 768px) {
     		font-size: 28px;
@@ -319,6 +338,8 @@
 .follow-us {
 
 	.insta-feed {
+		margin-top: 60px;
+
 		.image {
 		    position:relative;
 		    overflow:hidden;
@@ -337,6 +358,8 @@
 }
 
 .stay-in-touch {
+	margin-bottom: 125px;
+
 	h2 {
 		font-size: 32px;
     	letter-spacing: 0.6px;
@@ -352,25 +375,3 @@
 		letter-spacing: 0.2px;
 	}
 }
-
-// .carousel-fade .carousel-inner .carousel-item {
-// 	transition-property: opacity;
-// 	transition-duration: 0.2s !important;
-// }
-// .carousel-fade .carousel-inner .carousel-item,
-// .carousel-fade .carousel-inner .active.left,
-// .carousel-fade .carousel-inner .active.right {
-// 	opacity: 0;
-// }
-// .carousel-fade .carousel-inner .active,
-// .carousel-fade .carousel-inner .next.left,
-// .carousel-fade .carousel-inner .prev.right {
-// 	opacity: 1;
-// }
-// .carousel-fade .carousel-inner .next,
-// .carousel-fade .carousel-inner .prev,
-// .carousel-fade .carousel-inner .active.left,
-// .carousel-fade .carousel-inner .active.right {
-// 	left: 0;
-// 	transform: translate3d(0, 0, 0);
-// }

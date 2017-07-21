@@ -110,7 +110,7 @@ $(document).ready(function () {
       infinite: true,
       slidesToShow: 2,
       slidesToScroll: 2,
-      dots: false,
+      dots: true,
       speed: 300,
       cssEase: 'linear',
       pause: false,
@@ -125,10 +125,10 @@ $(document).ready(function () {
       }],
     });
 
-    $('#recentProjectsSlider').on('init reInit resize destroy afterChange', function (event, slick, currentSlide, nextSlide) {
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $('.paging-info').text(i + '/' + $(slick.$slider[0].children[0].children[0]).find('.slick-slide:not(.slick-cloned)').length);
-    });
+    // $('#recentProjectsSlider').on('init reInit resize destroy afterChange', function (event, slick, currentSlide, nextSlide) {
+    //     var i = (currentSlide ? currentSlide : 0) + 1;
+    //     $('.paging-info').text(i + '/' + $(slick.$slider[0].children[0].children[0]).find('.slick-slide:not(.slick-cloned)').length);
+    // });
 
     $('.left-arrow').click(function(event){
       $('#recentProjectsSlider').slick('slickPrev');

@@ -16,7 +16,7 @@
 		<div class="col-lg-10 offset-lg-1">
 			<div class="row vertical-align">
 				<div class="col-lg-12">
-		    		<h2 class="mx-auto mb-5 text-center mustard">Say Hello</h2>
+		    		<h2 class="mx-auto text-center mustard">Say Hello</h2>
 		    	</div>
 		    		<?php
 

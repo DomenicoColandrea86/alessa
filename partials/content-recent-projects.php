@@ -18,7 +18,7 @@
 			    <div class="btl bt-times white close-recent-projects mr-3" data-dismiss="modal" aria-label="Close"></div>
             </div>
             <div class="modal-body">
-                <section class="container-fluid p-0">
+                <div class="container-fluid p-0">
 				    <div class="row">
 				        <div class="col-lg-12 p-0 recent-projects-slider-container">
 				        	<div id="recentProjectsSlider" class="content">
@@ -90,7 +90,7 @@
 							</div>
 						</div>
 				    </div>
-				</section>
+				</div>
             </div>
             <div class="modal-footer">
             	<div class="recent-projects-footer">

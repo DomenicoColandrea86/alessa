@@ -18,7 +18,7 @@ footer,
         font-size: 11px;
         letter-spacing: 3px;
         font-weight: 600;
-        @include helvetica;
+        @include graphik;
         text-transform: uppercase;
     }
 
@@ -44,7 +44,7 @@ footer,
             font-weight: 100;
             color: #a3a3a3;
             letter-spacing: 1px;
-            @include helvetica;
+            @include graphik;
         }
     }
 

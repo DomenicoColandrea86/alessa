@@ -68,7 +68,7 @@
 }
 
 @mixin sans-serif-font() {
-    font-family: 'Avenir-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Graphik', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
 @mixin header-font() {
@@ -77,6 +77,10 @@
 
 @mixin helvetica() {
     font-family: Helvetica, Arial, sans-serif !important;
+}
+
+@mixin graphik() {
+    font-family: 'Graphik', Arial, sans-serif !important;
 }
 
 @mixin eames-century-book() {

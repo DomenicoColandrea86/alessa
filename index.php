@@ -247,7 +247,9 @@ get_header(); ?>
 <img class="showcase mb-5 mt-5" src="<?php the_field('showcase'); ?>" alt="">
 
 <!-- Say Hello -->
-<?php get_template_part( 'partials/content', 'sayhello' ); ?>
+<div data-0="transform:translateY(75vh);" data-5000="transform:translateY(-10vh);">
+	<?php get_template_part( 'partials/content', 'sayhello' ); ?>
+</div>
 
 
 <!-- Instagram Feed -->

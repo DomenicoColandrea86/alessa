@@ -240,9 +240,10 @@ body {
         margin: auto;
         align-self: center;
         color: #fff;
-        font-size: 18px;
+        font-size: 18px;z-index: 1000;
         line-height: 18px;
         letter-spacing: 2px;
+        z-index: 1000;
         font-family: Avenir-Light,Helvetica Neue,Helvetica,Arial,sans-serif!important;
       }
     }

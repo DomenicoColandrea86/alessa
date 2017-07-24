@@ -54,10 +54,12 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-        	<div data-0="transform:translateY(17vh);" data-5000="transform:translateY(-130vh);">
-        		<h2 class="mt-3 mb-3 text-center dark-navy"><?php the_field('headline'); ?></h2>
-	            <p class="text-center charcoal"><?php the_field('body'); ?></p>
-	            <div class="mt-5 mx-auto icon-arrow-down"></div>
+        	<div class="col-lg-12">
+        		<div data-0="transform:translateY(17vh);" data-5000="transform:translateY(-130vh);">
+	        		<h2 class="mt-3 mb-3 text-center dark-navy"><?php the_field('headline'); ?></h2>
+		            <p class="text-center charcoal"><?php the_field('body'); ?></p>
+		            <div class="mt-5 mx-auto icon-arrow-down"></div>
+	        	</div>
         	</div>
         </div>
     </div>

@@ -45,6 +45,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 endwhile; endif; ?>
 
+<!-- Say Hello -->
+<?php get_template_part( 'partials/content', 'sayhello' ); ?>
+
 <!-- More Projects -->
 <section class="container-fluid more-projects pb-0">
     <div class="row">

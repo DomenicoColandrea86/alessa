@@ -22,10 +22,12 @@ get_header(); ?>
 <section class="container-fluid intro">
     <div class="row">
         <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-        	<div data-0="transform:translateY(17vh);" data-5000="transform:translateY(-130vh);">
-				<h2 class="mt-3 mb-3 text-center dark-navy"><?php the_field('headline'); ?></h2>
-				<p class="text-center charcoal"><?php the_field('body'); ?></p>
-				<div class="mt-5 mx-auto icon-arrow-down"></div>
+        	<div class="col-lg-12">
+        		<div data-0="transform:translateY(17vh);" data-5000="transform:translateY(-130vh);">
+					<h2 class="mt-3 mb-3 text-center dark-navy"><?php the_field('headline'); ?></h2>
+					<p class="text-center charcoal"><?php the_field('body'); ?></p>
+					<div class="mt-5 mx-auto icon-arrow-down"></div>
+	        	</div>
         	</div>
         </div>
     </div>
@@ -35,42 +37,44 @@ get_header(); ?>
 <section class="container-fluid our-team">
 	<div class="row">
 		<div class="col-lg-8 offset-lg-2 mb-5">
-			<div data-0="transform:translateY(25vh);" data-5000="transform:translateY(-100vh);">
-				<div class="row">
-					<div class="col-lg-12">
-						<h2 class="mx-auto mb-5 text-center mustard">Our Team</h2>
-					</div>
-					
-					<?php
-
-					$args = array(
-						'post_type' 	 => 'team-member',
-						'orderby' 		 => 'ASC',
-						'posts_per_page' => -1,
-					);
-
-					$the_query = new WP_Query( $args );
-
-					if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
-
-					?>
-					
-					<div class="col-md-3 col-6">
-						<img class="card-img-top" src="<?php the_field('photo'); ?>" alt="">
-						<div class="card-block pl-0 pr-0">
-							<h4 class="card-title charcoal mb-0"><?php the_field('full_name'); ?></h4>
-							<p class="card-text cloudy"><?php the_field('job_title'); ?></p>
+			<div class="col-lg-12">
+				<div data-0="transform:translateY(25vh);" data-5000="transform:translateY(-100vh);">
+					<div class="row">
+						<div class="col-lg-12">
+							<h2 class="mx-auto mb-5 text-center mustard">Our Team</h2>
 						</div>
-				    </div>
+						
+						<?php
 
-					<?php endwhile; else: ?>
+						$args = array(
+							'post_type' 	 => 'team-member',
+							'orderby' 		 => 'ASC',
+							'posts_per_page' => -1,
+						);
 
-					<p class="mx-auto text-center charcoal sub-text">Sorry, there are no team members to display</p>
+						$the_query = new WP_Query( $args );
 
-					<?php
+						if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); 
 
-					endif;
-					wp_reset_query(); ?>
+						?>
+						
+						<div class="col-md-3 col-6">
+							<img class="card-img-top" src="<?php the_field('photo'); ?>" alt="">
+							<div class="card-block pl-0 pr-0">
+								<h4 class="card-title charcoal mb-0"><?php the_field('full_name'); ?></h4>
+								<p class="card-text cloudy"><?php the_field('job_title'); ?></p>
+							</div>
+					    </div>
+
+						<?php endwhile; else: ?>
+
+						<p class="mx-auto text-center charcoal sub-text">Sorry, there are no team members to display</p>
+
+						<?php
+
+						endif;
+						wp_reset_query(); ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -118,8 +122,10 @@ get_header(); ?>
 	<div data-0="transform:translateY(40vh);" data-5000="transform:translateY(-10vh);">
 	    <div class="row">
 	        <div class="col-lg-10 offset-lg-1">
-	        	<div class="content mt-5">
-	        		<img src="<?php the_field('map'); ?>" />
+	        	<div class="col-lg-12">
+	        		<div class="content mt-5">
+		        		<img src="<?php the_field('map'); ?>" />
+		        	</div>
 	        	</div>
 	        </div>
 	    </div>

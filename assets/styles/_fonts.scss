@@ -1,7 +1,11 @@
 @font-face {
 	font-family: 'Eames-Century-Book';
-	src:url('../fonts/EamesCentury/EamesCenturyModern-Book.woff2') format('woff2'),
-		url('../fonts/EamesCentury/EamesCenturyModern-Book.woff') format('woff');
+	src: url('../fonts/EamesCentury/EamesCenturyModern-Book.eot');
+	src: url('../fonts/EamesCentury/EamesCenturyModern-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/EamesCentury/EamesCenturyModern-Book.woff2') format('woff2'),
+		url('../fonts/EamesCentury/EamesCenturyModern-Book.woff') format('woff'),
+		url('../fonts/EamesCentury/EamesCenturyModern-Book.ttf') format('truetype'),
+		url('../fonts/EamesCentury/EamesCenturyModern-Book.svg#EamesCenturyModern-Book') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

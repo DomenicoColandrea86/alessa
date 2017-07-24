@@ -34,7 +34,7 @@ body.case-study-template-default {
 		p {
 			font-size: 16px;
 			letter-spacing: 0.2px;
-			font-family: Helvetica Neue,Helvetica,Arial,sans-serif!important;
+			@include sans-serif-font;
 		    font-weight: 300;
 		    line-height: 1.5;
 		    color: #4C4F54;

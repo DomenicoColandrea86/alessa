@@ -166,13 +166,16 @@ body.case-study-template-default {
 				    background: rgba(14, 24, 32, .9);
 
 				    @media (max-width: 575px) {
-				     	opacity: 1;
 				     	padding: 2rem;
 					}
 
 					.icon-arrow-white {
 						position: absolute;
 	    				bottom: 20%;
+
+	    				@media (max-width: 575px) {
+					     	display: none;
+						}
 					}
 				}
 
@@ -197,6 +200,8 @@ body.case-study-template-default {
 
 				    @media (max-width: 768px) {
 				        margin-bottom: 10px;
+				        font-size: 14px;
+				        letter-spacing: 1px;
 					}
 				}
 		    }

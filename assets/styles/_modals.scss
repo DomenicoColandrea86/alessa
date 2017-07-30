@@ -297,6 +297,10 @@ body {
         .icon-arrow-white {
           position: absolute;
             bottom: 20%;
+
+            @media (max-width: 575px) {
+                display: none;
+            }
         }
       }
 
@@ -308,7 +312,7 @@ body {
           @include header-font;
 
           @media (max-width: 768px) {
-              font-size: 25px;
+              font-size: 24px;
           }
       }
 
@@ -321,6 +325,8 @@ body {
 
           @media (max-width: 768px) {
               margin-bottom: 10px;
+              font-size: 14px;
+              letter-spacing: 1px;
         }
       }
     }

@@ -152,7 +152,7 @@ get_header(); ?>
 </section>
 
 <!-- Selected Clients -->
-<section class="container-fluid selected-clients stripe">
+<section class="container-fluid selected-clients stripe pb-0">
 	<div data-0="transform:translateY(85vh);" data-5000="transform:translateY(-45vh);">
     	    <div class="row">
         <div class="col-lg-10 offset-lg-1">
@@ -189,9 +189,15 @@ get_header(); ?>
 				endif;
 				wp_reset_query(); ?>
 		    </div>
-		    
-        	<!-- Testimonials Carousel -->
-			<div id="testimonialsCarousel" class="mt-3 testimonials carousel slide carousel-fade" data-ride="carousel" data-wrap="true">
+        </div>
+    </div>	
+	</div>
+</section>
+
+<section class="pt-0">
+	<div class="row">
+		<!-- Testimonials Carousel -->
+			<div id="testimonialsCarousel" class="mx-auto testimonials carousel slide carousel-fade" data-ride="carousel" data-wrap="true">
 				<div class="col-8 offset-2">
 					<div class="carousel-inner" role="listbox">
 						<?php
@@ -240,8 +246,6 @@ get_header(); ?>
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-        </div>
-    </div>	
 	</div>
 </section>
 
@@ -249,7 +253,7 @@ get_header(); ?>
 <img class="showcase mb-5 mt-5" src="<?php the_field('showcase'); ?>" alt="">
 
 <!-- Say Hello -->
-<div data-0="transform:translateY(75vh);" data-5000="transform:translateY(-10vh);">
+<div data-0="transform:translateY(100vh);" data-5000="transform:translateY(-10vh);">
 	<?php get_template_part( 'partials/content', 'sayhello' ); ?>
 </div>
 

@@ -216,9 +216,8 @@ A small CSS modification is required. Add this to your theme CSS.
         .taptap-main-menu-button:before,
         .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
         .taptap-main-menu-button:after {
-            transition: background-color linear 0.4s;
-            height: 1px !important;
-            margin: 8px 0 !important;
+            height: 1px;
+            margin: 8px 0;
         }
     }
 
@@ -226,8 +225,8 @@ A small CSS modification is required. Add this to your theme CSS.
         .taptap-main-menu-button:before,
         .taptap-main-menu-button div.taptap-main-menu-button-middle:before,
         .taptap-main-menu-button:after {
-            height: 2px !important;
-            margin: 5px 0 !important;
+            height: 2px;
+            margin: 5px 0;
         }
     }
 

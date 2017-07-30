@@ -40,8 +40,8 @@
 							if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 
 							?>
-							<p><?php the_field('phone'); ?></p>
-				    		<p><?php the_field('email'); ?></p>
+							<a href="tel:<?php the_field('phone'); ?>"><p><?php the_field('phone'); ?></p></a>
+				    		<a href="mailto:<?php the_field('email'); ?>"><p><?php the_field('email'); ?></p></a>
 				    		<br>
 				    		<p><?php the_field('address'); ?></p>
 				    		<p class="mb-0"><?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zipcode'); ?></p>

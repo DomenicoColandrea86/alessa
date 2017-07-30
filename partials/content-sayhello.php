@@ -33,10 +33,16 @@
 				<div class="col-lg-6 mb-4">
 					<div>
 						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Business Inquiries</p>
-			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('business_inquiries'); ?></p>
+			    		<a href="mailto:<?php the_field('business_inquiries'); ?>">
+			    			<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('business_inquiries'); ?>
+			    			</p>
+			    		</a>
 			    		<br>
 			    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">College Internships</p>
-		    			<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('college_internships'); ?></p>
+			    		<a href="mailto:<?php the_field('college_internships'); ?>">
+			    			<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('business_inquiries'); ?>
+			    			</p>
+			    		</a>
 					</div>
 				</div>
 				<div class="col-lg-6 mb-4">
@@ -44,7 +50,10 @@
 						<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Stop by</p>
 			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('address'); ?></p>
 			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zipcode'); ?></p>
-			    		<p class="mx-auto d-table text-center charcoal section-text"><?php the_field('phone'); ?></p>
+			    		<a href="tel:<?php the_field('phone'); ?>">
+			    			<p class="mx-auto d-table text-center charcoal section-text" style="margin-bottom: 35px;"><?php the_field('phone'); ?></p>
+			    		</a>
+			    		<p class="mx-auto d-table mb-2 dark-navy text-center text-uppercase section-highlight">Follow us</p>
 			    		<div class="d-flex justify-content-between col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-8 offset-sm-2 mt-2">
 
 			    		<?php 

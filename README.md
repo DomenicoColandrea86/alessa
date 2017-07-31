@@ -1,3 +1,3 @@
-# G7 Marketing Website
+# Alessa
 
 > A custom wordpress theme

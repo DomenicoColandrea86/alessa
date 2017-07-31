@@ -113,9 +113,7 @@ get_header(); ?>
 </div>       
 
 <!-- Say Hello -->
-<div data-0="transform:translateY(30vh);" data-5000="transform:translateY(-10vh);">
-	<?php get_template_part( 'partials/content', 'sayhello' ); ?>
-</div>
+<?php get_template_part( 'partials/content', 'sayhello' ); ?>
 
 <!-- Map -->
 <section class="container-fluid map stripe pt-3">

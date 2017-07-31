@@ -3,6 +3,9 @@
 .modal {
   z-index: 222222 !important;
   background: white;
+  &.contact-us-modal {
+    z-index: 2222222 !important;
+  }
 }
 // Contact us modal
 .contact-us-modal {

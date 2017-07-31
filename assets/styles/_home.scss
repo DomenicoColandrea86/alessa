@@ -155,6 +155,7 @@
 }
 
 .recent-projects {
+	margin-top: 75px;
 	h2 {
 		font-size: 32px;
     	letter-spacing: 0.6px;
@@ -245,6 +246,7 @@
 }
 
 .selected-clients {
+	margin-top: 100px;
 	h2 {
 		font-size: 32px;
     	letter-spacing: 0.6px;
@@ -321,7 +323,7 @@
 		font-size: 32px;
     	letter-spacing: 0.6px;
     	@include header-font;
-    	margin-top: 65px;
+    	margin-top: 150px;
     	margin-bottom: 40px;
 
     	@media (max-width: 768px) {
@@ -393,4 +395,8 @@
 		font-size: 20px;
 		letter-spacing: 0.2px;
 	}
+}
+
+.showcase {
+	margin-top: 5rem!important;
 }
